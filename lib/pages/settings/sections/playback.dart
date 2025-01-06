@@ -12,8 +12,23 @@ import 'package:spotube/components/adaptive/adaptive_select_tile.dart';
 import 'package:spotube/extensions/context.dart';
 import 'package:spotube/provider/piped_instances_provider.dart';
 import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
-
 import 'package:spotube/services/sourced_track/enums.dart';
+
+// StateProvider: 存储用户设置的自定义 Instance URL
+final customInstanceUrlProvider = StateProvider<String?>((ref) => null);
+
+// StateProvider: 存储用户设置的自定义 Instance 列表 URL
+final customInstanceListUrlProvider = StateProvider<String?>((ref) => null);
+
+// Provider: 提供 PipedClient 实例
+final pipedClientProvider = Provider<PipedClient>((ref) {
+  final customInstanceUrl = ref.watch(customInstanceUrlProvider);
+  final customInstanceListUrl = ref.watch(customInstanceListUrlProvider);
+  return PipedClient(
+    instance: customInstanceUrl,
+    customInstanceListUrl: customInstanceListUrl,
+  );
+});
 
 class SettingsPlaybackSection extends HookConsumerWidget {
   const SettingsPlaybackSection({super.key});
@@ -23,6 +38,10 @@ class SettingsPlaybackSection extends HookConsumerWidget {
     final preferences = ref.watch(userPreferencesProvider);
     final preferencesNotifier = ref.watch(userPreferencesProvider.notifier);
     final theme = Theme.of(context);
+
+    // 获取用户设置的 URL 的当前值
+    final customInstanceUrl = ref.watch(customInstanceUrlProvider);
+    final customInstanceListUrl = ref.watch(customInstanceListUrlProvider);
 
     return SectionCardWithHeading(
       heading: context.l10n.playback,
@@ -135,6 +154,111 @@ class SettingsPlaybackSection extends HookConsumerWidget {
                   );
                 }),
         ),
+
+        // 自定义 Piped 实例 URL 设置
+        AnimatedSwitcher(
+          duration: const Duration(milliseconds: 300),
+          child: preferences.audioSource != AudioSource.piped
+              ? const SizedBox.shrink()
+              : ListTile(
+                  leading: const Icon(SpotubeIcons.piped),
+                  title: Text(context.l10n.custom_instance_url),
+                  subtitle: Text(
+                    customInstanceUrl ?? context.l10n.not_set,
+                  ),
+                  onTap: () async {
+                    // 弹出对话框让用户输入 URL
+                    final newUrl = await showDialog<String>(
+                      context: context,
+                      builder: (context) {
+                        String? inputUrl = customInstanceUrl;
+                        return AlertDialog(
+                          title: Text(context.l10n.custom_instance_url),
+                          content: TextField(
+                            controller: TextEditingController(text: inputUrl),
+                            onChanged: (value) => inputUrl = value,
+                            decoration: const InputDecoration(
+                              hintText: PipedClient.defaultInstance, // 改这里
+                            ),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => context.pop(),
+                              child: Text(context.l10n.cancel),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                context.pop(inputUrl);
+                              },
+                              child: Text(context.l10n.save),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    if (newUrl != null) {
+                      // 更新状态并将新的 URL 应用到 PipedClient
+                      ref.read(customInstanceUrlProvider.notifier).state =
+                          newUrl;
+                      ref.read(pipedClientProvider).setInstanceUrl(newUrl); // 改这里
+                    }
+                  },
+                ),
+        ),
+
+        // 自定义 Instance 列表 URL 设置
+        AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: preferences.audioSource != AudioSource.piped
+                ? const SizedBox.shrink()
+                : ListTile(
+                    leading: const Icon(Icons.link),
+                    title: Text(context.l10n.custom_instance_list_url),
+                    subtitle: Text(
+                        customInstanceListUrl ?? context.l10n.default_piped_list),
+                    onTap: () async {
+                      // 弹出对话框让用户输入 URL
+                      final newUrl = await showDialog<String>(
+                        context: context,
+                        builder: (context) {
+                          String? inputUrl = customInstanceListUrl;
+                          return AlertDialog(
+                            title: Text(context.l10n.custom_instance_list_url),
+                            content: TextField(
+                              controller:
+                                  TextEditingController(text: inputUrl),
+                              onChanged: (value) => inputUrl = value,
+                              decoration: const InputDecoration(
+                                hintText: PipedClient.defaultInstanceListUrl, // 改这里
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => context.pop(),
+                                child: Text(context.l10n.cancel),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  context.pop(inputUrl);
+                                },
+                                child: Text(context.l10n.save),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                      if (newUrl != null) {
+                        // 更新状态并将新的 URL 应用到 PipedClient
+                        ref
+                            .read(customInstanceListUrlProvider.notifier)
+                            .state = newUrl;
+                        ref
+                            .read(pipedClientProvider)
+                            .setCustomInstanceListUrl(newUrl); // 改这里
+                      }
+                    },
+                  )),
+
         AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
           child: preferences.audioSource != AudioSource.piped

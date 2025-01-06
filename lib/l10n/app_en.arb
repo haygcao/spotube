@@ -387,5 +387,9 @@
   "total_money": "Total {money}",
   "webview_not_found": "Webview not found",
   "webview_not_found_description": "No webview runtime is installed in your device.\nIf it's installed make sure it's in the Environment PATH\n\nAfter installing, restart the app",
-  "unsupported_platform": "Unsupported platform"
+  "unsupported_platform": "Unsupported platform",
+  "custom_instance_url": "Custom Instance Url",
+  "not_set": "Not Set",
+  "custom_instance_list_url": "Custom Instance List URL",
+  "default_piped_list": "Default Piped's list"
 }
