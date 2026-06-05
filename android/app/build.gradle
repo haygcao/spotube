@@ -2,6 +2,7 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
+    id "org.jetbrains.kotlin.plugin.compose"
 }
 
 def localProperties = new Properties()
@@ -33,9 +34,9 @@ def composeVersion = "1.4.8"
 android {
     namespace "oss.krtirtho.spotube"
     
-    compileSdkVersion 35
+    compileSdkVersion 36
 
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "29.0.14206865"
 
     compileOptions {
         coreLibraryDesugaringEnabled true

@@ -309,13 +309,15 @@ class AppLocalizationsUk extends AppLocalizations {
   String get mini_player => 'Міні-плеєр';
 
   @override
-  String get slide_to_seek => 'Проведіть пальцем, щоб перемотати вперед або назад';
+  String get slide_to_seek =>
+      'Проведіть пальцем, щоб перемотати вперед або назад';
 
   @override
   String get shuffle_playlist => 'Випадковий порядок відтворення плейлиста';
 
   @override
-  String get unshuffle_playlist => 'Відключити випадковий порядок відтворення плейлиста';
+  String get unshuffle_playlist =>
+      'Відключити випадковий порядок відтворення плейлиста';
 
   @override
   String get previous_track => 'Попередній трек';
@@ -356,7 +358,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get clear_all => 'Очистити все';
 
   @override
-  String get show_hide_ui_on_hover => 'Показувати/приховувати інтерфейс при наведенні курсору';
+  String get show_hide_ui_on_hover =>
+      'Показувати/приховувати інтерфейс при наведенні курсору';
 
   @override
   String get always_on_top => 'Завжди зверху';
@@ -378,12 +381,6 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get account => 'Обліковий запис';
-
-  @override
-  String get login_with_spotify => 'Увійти за допомогою облікового запису Spotify';
-
-  @override
-  String get connect_with_spotify => 'Підключитися до Spotify';
 
   @override
   String get logout => 'Вийти';
@@ -413,7 +410,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get layout_mode => 'Режим макета';
 
   @override
-  String get override_layout_settings => 'Перезаписати налаштування адаптивного режиму макета';
+  String get override_layout_settings =>
+      'Перезаписати налаштування адаптивного режиму макета';
 
   @override
   String get adaptive => 'Адаптивний';
@@ -443,7 +441,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get sync_album_color => 'Синхронізувати колір альбому';
 
   @override
-  String get sync_album_color_description => 'Використовує домінуючий колір обкладинки альбому як колір акценту';
+  String get sync_album_color_description =>
+      'Використовує домінуючий колір обкладинки альбому як колір акценту';
 
   @override
   String get playback => 'Відтворення';
@@ -461,7 +460,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get pre_download_play => 'Попереднє завантаження та відтворення';
 
   @override
-  String get pre_download_play_description => 'Замість потокового відтворення аудіо завантажте байти та відтворіть їх (рекомендовано для користувачів з високою пропускною здатністю)';
+  String get pre_download_play_description =>
+      'Замість потокового відтворення аудіо завантажте байти та відтворіть їх (рекомендовано для користувачів з високою пропускною здатністю)';
 
   @override
   String get skip_non_music => 'Пропустити не музичні сегменти';
@@ -470,7 +470,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get blacklist_description => 'Треки та виконавці в чорному списку';
 
   @override
-  String get wait_for_download_to_finish => 'Зачекайте, поки завершиться поточна загрузка';
+  String get wait_for_download_to_finish =>
+      'Зачекайте, поки завершиться поточна загрузка';
 
   @override
   String get desktop => 'Робочий стіл';
@@ -506,7 +507,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get please_sponsor => 'Будь ласка, станьте спонсором/зробіть пожертву';
 
   @override
-  String get spotube_description => 'Spotube, легкий, кросплатформовий, безкоштовний клієнт Spotify';
+  String get spotube_description =>
+      'Spotube, легкий, кросплатформовий, безкоштовний клієнт Spotify';
 
   @override
   String get version => 'Версія';
@@ -538,21 +540,14 @@ class AppLocalizationsUk extends AppLocalizations {
   String get license => 'Ліцензія';
 
   @override
-  String get add_spotify_credentials => 'Додайте свої облікові дані Spotify, щоб почати';
-
-  @override
-  String get credentials_will_not_be_shared_disclaimer => 'Не хвилюйтеся, жодні ваші облікові дані не будуть зібрані або передані кому-небудь';
+  String get credentials_will_not_be_shared_disclaimer =>
+      'Не хвилюйтеся, жодні ваші облікові дані не будуть зібрані або передані кому-небудь';
 
   @override
   String get know_how_to_login => 'Не знаєте, як це зробити?';
 
   @override
   String get follow_step_by_step_guide => 'Дотримуйтесь покрокової інструкції';
-
-  @override
-  String spotify_cookie(Object name) {
-    return 'Кукі-файл Spotify $name';
-  }
 
   @override
   String cookie_name_cookie(Object name) {
@@ -584,52 +579,29 @@ class AppLocalizationsUk extends AppLocalizations {
   String get first_go_to => 'Спочатку перейдіть на';
 
   @override
-  String get login_if_not_logged_in => 'та Увійдіть/Зареєструйтесь, якщо ви не ввійшли';
-
-  @override
-  String get step_2 => 'Крок 2';
-
-  @override
-  String get step_2_steps => '1. Після входу натисніть F12 або клацніть правою кнопкою миші > Інспектувати, щоб відкрити інструменти розробки браузера.\n2. Потім перейдіть на вкладку \'Програма\' (Chrome, Edge, Brave тощо) або вкладку \'Сховище\' (Firefox, Palemoon тощо).\n3. Перейдіть до розділу \'Кукі-файли\', а потім до підрозділу \'https://accounts.spotify.com\'';
-
-  @override
-  String get step_3 => 'Крок 3';
-
-  @override
-  String get step_3_steps => 'Скопіюйте значення cookie \"sp_dc\"';
-
-  @override
-  String get success_emoji => 'Успіх🥳';
-
-  @override
-  String get success_message => 'Тепер ви успішно ввійшли у свій обліковий запис Spotify. Гарна робота, друже!';
-
-  @override
-  String get step_4 => 'Крок 4';
-
-  @override
-  String get step_4_steps => 'Вставте скопійоване значення \"sp_dc\"';
-
-  @override
   String get something_went_wrong => 'Щось пішло не так';
 
   @override
   String get piped_instance => 'Примірник сервера Piped';
 
   @override
-  String get piped_description => 'Примірник сервера Piped, який використовуватиметься для зіставлення треків';
+  String get piped_description =>
+      'Примірник сервера Piped, який використовуватиметься для зіставлення треків';
 
   @override
-  String get piped_warning => 'Деякі з них можуть працювати неправильно. Тому використовуйте на свій страх і ризик';
+  String get piped_warning =>
+      'Деякі з них можуть працювати неправильно. Тому використовуйте на свій страх і ризик';
 
   @override
   String get invidious_instance => 'Екземпляр сервера Invidious';
 
   @override
-  String get invidious_description => 'Екземпляр сервера Invidious для зіставлення треків';
+  String get invidious_description =>
+      'Екземпляр сервера Invidious для зіставлення треків';
 
   @override
-  String get invidious_warning => 'Деякі можуть працювати не дуже добре. Використовуйте на власний ризик';
+  String get invidious_warning =>
+      'Деякі можуть працювати не дуже добре. Використовуйте на власний ризик';
 
   @override
   String get generate => 'Генерувати';
@@ -643,7 +615,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get replace_downloaded_tracks => 'Замінити всі завантажені треки';
 
   @override
-  String get skip_download_tracks => 'Пропустити завантаження всіх завантажених треків';
+  String get skip_download_tracks =>
+      'Пропустити завантаження всіх завантажених треків';
 
   @override
   String get do_you_want_to_replace => 'Ви хочете замінити існуючий трек?';
@@ -744,7 +717,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get are_you_sure => 'Ви впевнені?';
 
   @override
-  String get generating_playlist => 'Створення вашого персонального плейлиста...';
+  String get generating_playlist =>
+      'Створення вашого персонального плейлиста...';
 
   @override
   String selected_count_tracks(Object count) {
@@ -752,22 +726,27 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get download_warning => 'Якщо ви завантажуєте всі треки масово, ви явно піратствуєте і завдаєте шкоди музичному творчому співтовариству. Сподіваюся, ви усвідомлюєте це. Завжди намагайтеся поважати і підтримувати важку працю артиста';
+  String get download_warning =>
+      'Якщо ви завантажуєте всі треки масово, ви явно піратствуєте і завдаєте шкоди музичному творчому співтовариству. Сподіваюся, ви усвідомлюєте це. Завжди намагайтеся поважати і підтримувати важку працю артиста';
 
   @override
-  String get download_ip_ban_warning => 'До речі, ваш IP може бути заблокований на YouTube через надмірну кількість запитів на завантаження, ніж зазвичай. Блокування IP-адреси означає, що ви не зможете користуватися YouTube (навіть якщо ви увійшли в систему) протягом щонайменше 2-3 місяців з цього пристрою. І Spotube не несе жодної відповідальності, якщо це станеться';
+  String get download_ip_ban_warning =>
+      'До речі, ваш IP може бути заблокований на YouTube через надмірну кількість запитів на завантаження, ніж зазвичай. Блокування IP-адреси означає, що ви не зможете користуватися YouTube (навіть якщо ви увійшли в систему) протягом щонайменше 2-3 місяців з цього пристрою. І Spotube не несе жодної відповідальності, якщо це станеться';
 
   @override
-  String get by_clicking_accept_terms => 'Натискаючи \'прийняти\', ви погоджуєтеся з наступними умовами:';
+  String get by_clicking_accept_terms =>
+      'Натискаючи \'прийняти\', ви погоджуєтеся з наступними умовами:';
 
   @override
   String get download_agreement_1 => 'Я знаю, що краду музику. Я поганий.';
 
   @override
-  String get download_agreement_2 => 'Я підтримаю автора, де тільки зможу, і роблю це лише тому, що не маю грошей, щоб купити його роботи.';
+  String get download_agreement_2 =>
+      'Я підтримаю автора, де тільки зможу, і роблю це лише тому, що не маю грошей, щоб купити його роботи.';
 
   @override
-  String get download_agreement_3 => 'Я повністю усвідомлюю, що мій IP може бути заблокований на YouTube, і я не покладаю на Spotube або його власників/контрибуторів відповідальність за будь-які нещасні випадки, спричинені моїми діями.';
+  String get download_agreement_3 =>
+      'Я повністю усвідомлюю, що мій IP може бути заблокований на YouTube, і я не покладаю на Spotube або його власників/контрибуторів відповідальність за будь-які нещасні випадки, спричинені моїми діями.';
 
   @override
   String get decline => 'Відхилити';
@@ -848,7 +827,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get failed_to_encrypt => 'Не вдалося зашифрувати';
 
   @override
-  String get encryption_failed_warning => 'Spotube використовує шифрування для безпечного зберігання ваших даних. Але не вдалося цього зробити. Тому він перейде до небезпечного зберігання\nЯкщо ви використовуєте Linux, переконайтеся, що у вас встановлено будь-який секретний сервіс (gnome-keyring, kde-wallet, keepassxc тощо)';
+  String get encryption_failed_warning =>
+      'Spotube використовує шифрування для безпечного зберігання ваших даних. Але не вдалося цього зробити. Тому він перейде до небезпечного зберігання\nЯкщо ви використовуєте Linux, переконайтеся, що у вас встановлено будь-який секретний сервіс (gnome-keyring, kde-wallet, keepassxc тощо)';
 
   @override
   String get querying_info => 'Запит інформації...';
@@ -895,10 +875,16 @@ class AppLocalizationsUk extends AppLocalizations {
   String get restore_defaults => 'Відновити налаштування за замовчуванням';
 
   @override
-  String get download_music_codec => 'Завантажити кодек для музики';
+  String get download_music_format => 'Формат завантаження музики';
 
   @override
-  String get streaming_music_codec => 'Кодек потокової передачі музики';
+  String get streaming_music_format => 'Формат потокової музики';
+
+  @override
+  String get download_music_quality => 'Якість завантаженої музики';
+
+  @override
+  String get streaming_music_quality => 'Якість потокової музики';
 
   @override
   String get login_with_lastfm => 'Увійти з Last.fm';
@@ -946,7 +932,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get friends => 'Друзі';
 
   @override
-  String get no_lyrics_available => 'Вибачте, не вдалося знайти текст для цього треку';
+  String get no_lyrics_available =>
+      'Вибачте, не вдалося знайти текст для цього треку';
 
   @override
   String get start_a_radio => 'Запустити радіо';
@@ -955,7 +942,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get how_to_start_radio => 'Як ви хочете запустити радіо?';
 
   @override
-  String get replace_queue_question => 'Ви хочете замінити поточну чергу чи додати до неї?';
+  String get replace_queue_question =>
+      'Ви хочете замінити поточну чергу чи додати до неї?';
 
   @override
   String get endless_playback => 'Безкінечне відтворення';
@@ -964,7 +952,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get delete_playlist => 'Видалити плейлист';
 
   @override
-  String get delete_playlist_confirmation => 'Ви впевнені, що хочете видалити цей плейлист?';
+  String get delete_playlist_confirmation =>
+      'Ви впевнені, що хочете видалити цей плейлист?';
 
   @override
   String get local_tracks => 'Місцеві треки';
@@ -988,16 +977,20 @@ class AppLocalizationsUk extends AppLocalizations {
   String get get_started => 'Давайте почнемо';
 
   @override
-  String get youtube_source_description => 'Рекомендовано та працює краще за все.';
+  String get youtube_source_description =>
+      'Рекомендовано та працює краще за все.';
 
   @override
-  String get piped_source_description => 'Чи почуваєте себе вільно? Те саме, що і на YouTube, але набагато безкоштовно.';
+  String get piped_source_description =>
+      'Чи почуваєте себе вільно? Те саме, що і на YouTube, але набагато безкоштовно.';
 
   @override
-  String get jiosaavn_source_description => 'Найкраще для регіону Південної Азії.';
+  String get jiosaavn_source_description =>
+      'Найкраще для регіону Південної Азії.';
 
   @override
-  String get invidious_source_description => 'Подібний до Piped, але з вищою доступністю.';
+  String get invidious_source_description =>
+      'Подібний до Piped, але з вищою доступністю.';
 
   @override
   String highest_quality(Object quality) {
@@ -1008,13 +1001,15 @@ class AppLocalizationsUk extends AppLocalizations {
   String get select_audio_source => 'Виберіть джерело аудіо';
 
   @override
-  String get endless_playback_description => 'Автоматично додавати нові пісні\nв кінець черги';
+  String get endless_playback_description =>
+      'Автоматично додавати нові пісні\nв кінець черги';
 
   @override
   String get choose_your_region => 'Виберіть ваш регіон';
 
   @override
-  String get choose_your_region_description => 'Це допоможе Spotube показати вам правильний контент\nдля вашого місцезнаходження.';
+  String get choose_your_region_description =>
+      'Це допоможе Spotube показати вам правильний контент\nдля вашого місцезнаходження.';
 
   @override
   String get choose_your_language => 'Виберіть свою мову';
@@ -1023,7 +1018,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get help_project_grow => 'Допоможіть цьому проекту рости';
 
   @override
-  String get help_project_grow_description => 'Spotube - це проект з відкритим кодом. Ви можете допомогти цьому проекту зростати, вносячи свій внесок у проект, повідомляючи про помилки або пропонуючи нові функції.';
+  String get help_project_grow_description =>
+      'Spotube - це проект з відкритим кодом. Ви можете допомогти цьому проекту зростати, вносячи свій внесок у проект, повідомляючи про помилки або пропонуючи нові функції.';
 
   @override
   String get contribute_on_github => 'Долучайтесь на GitHub';
@@ -1117,7 +1113,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get choose_the_device => 'Виберіть пристрій:';
 
   @override
-  String get multiple_device_connected => 'Підключено кілька пристроїв.\nВиберіть пристрій, на якому ви хочете виконати цю дію';
+  String get multiple_device_connected =>
+      'Підключено кілька пристроїв.\nВиберіть пристрій, на якому ви хочете виконати цю дію';
 
   @override
   String get nothing_found => 'Нічого не знайдено';
@@ -1190,7 +1187,8 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get streaming_fees_hypothetical => '*Розраховано на основі виплат Spotify за стримінг\nвід \$0.003 до \$0.005. Це гіпотетичний\nрозрахунок, щоб дати уявлення користувачу про те, скільки б він\nзаплатив артистам, якби слухав їхні пісні на Spotify.';
+  String get streaming_fees_hypothetical =>
+      '*Розраховано на основі виплат Spotify за стримінг\nвід \$0.003 до \$0.005. Це гіпотетичний\nрозрахунок, щоб дати уявлення користувачу про те, скільки б він\nзаплатив артистам, якби слухав їхні пісні на Spotify.';
 
   @override
   String get minutes_listened => 'Хвилини прослуховування';
@@ -1212,7 +1210,8 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get spotify_hipotetical_calculation => '*Це розраховано на основі виплат Spotify за стрім\nвід \$0.003 до \$0.005. Це гіпотетичний розрахунок,\nщоб дати користувачеві уявлення про те, скільки б він заплатив\nартистам, якби слухав їхні пісні на Spotify.';
+  String get hipotetical_calculation =>
+      '*Це розраховано на основі середньої виплати за стрім онлайн-платформ для потокового відтворення музики, що становить від \$0,003 до \$0,005. Це гіпотетичний розрахунок, щоб дати користувачеві уявлення про те, скільки б вони заплатили артистам, якщо б слухали їхні пісні на різних музичних стрімінгових платформах.';
 
   @override
   String count_mins(Object minutes) {
@@ -1261,7 +1260,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get webview_not_found => 'Webview не знайдено';
 
   @override
-  String get webview_not_found_description => 'На вашому пристрої не встановлено виконуване середовище Webview.\nЯкщо воно встановлено, переконайтеся, що воно знаходиться в environment PATH\n\nПісля встановлення перезапустіть програму';
+  String get webview_not_found_description =>
+      'На вашому пристрої не встановлено виконуване середовище Webview.\nЯкщо воно встановлено, переконайтеся, що воно знаходиться в environment PATH\n\nПісля встановлення перезапустіть програму';
 
   @override
   String get unsupported_platform => 'Непідтримувана платформа';
@@ -1334,7 +1334,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get not_following_artists => 'Ви не підписані на жодного артиста';
 
   @override
-  String get no_favorite_albums_yet => 'Здається, ви ще не додали жодного альбому в улюблені';
+  String get no_favorite_albums_yet =>
+      'Здається, ви ще не додали жодного альбому в улюблені';
 
   @override
   String get no_logs_found => 'Жодних журналів не знайдено';
@@ -1358,7 +1359,8 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get youtube_engine_unix_issue_message => 'У macOS/Linux/Unix-подібних ОС, встановлення шляху в .zshrc/.bashrc/.bash_profile тощо не працює.\nВам потрібно налаштувати шлях у файлі конфігурації оболонки';
+  String get youtube_engine_unix_issue_message =>
+      'У macOS/Linux/Unix-подібних ОС, встановлення шляху в .zshrc/.bashrc/.bash_profile тощо не працює.\nВам потрібно налаштувати шлях у файлі конфігурації оболонки';
 
   @override
   String get download => 'Завантажити';
@@ -1376,7 +1378,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get edit_port => 'Редагувати порт';
 
   @override
-  String get port_helper_msg => 'За замовчуванням -1, що означає випадкове число. Якщо у вас налаштований брандмауер, рекомендується це налаштувати.';
+  String get port_helper_msg =>
+      'За замовчуванням -1, що означає випадкове число. Якщо у вас налаштований брандмауер, рекомендується це налаштувати.';
 
   @override
   String connect_request(Object client) {
@@ -1384,5 +1387,184 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get connection_request_denied => 'Підключення відхилено. Користувач відмовив у доступі.';
+  String get connection_request_denied =>
+      'Підключення відхилено. Користувач відмовив у доступі.';
+
+  @override
+  String get an_error_occurred => 'Сталася помилка';
+
+  @override
+  String get copy_to_clipboard => 'Копіювати в буфер обміну';
+
+  @override
+  String get view_logs => 'Переглянути логи';
+
+  @override
+  String get retry => 'Повторити';
+
+  @override
+  String get no_default_metadata_provider_selected =>
+      'Ви не встановили провайдера метаданих за замовчуванням';
+
+  @override
+  String get manage_metadata_providers => 'Керувати провайдерами метаданих';
+
+  @override
+  String get open_link_in_browser => 'Відкрити посилання в браузері?';
+
+  @override
+  String get do_you_want_to_open_the_following_link =>
+      'Ви хочете відкрити наступне посилання';
+
+  @override
+  String get unsafe_url_warning =>
+      'Відкриття посилань з ненадійних джерел може бути небезпечним. Будьте обережні!\nВи також можете скопіювати посилання в буфер обміну.';
+
+  @override
+  String get copy_link => 'Копіювати посилання';
+
+  @override
+  String get building_your_timeline =>
+      'Створення вашої часової шкали на основі ваших прослуховувань...';
+
+  @override
+  String get official => 'Офіційний';
+
+  @override
+  String author_name(Object author) {
+    return 'Автор: $author';
+  }
+
+  @override
+  String get third_party => 'Сторонній';
+
+  @override
+  String get plugin_requires_authentication => 'Плагін вимагає автентифікації';
+
+  @override
+  String get update_available => 'Доступне оновлення';
+
+  @override
+  String get supports_scrobbling => 'Підтримує скроблінг';
+
+  @override
+  String get plugin_scrobbling_info =>
+      'Цей плагін скроббить вашу музику, щоб створити вашу історію прослуховувань.';
+
+  @override
+  String get default_metadata_source => 'Джерело метаданих за замовчуванням';
+
+  @override
+  String get set_default_metadata_source =>
+      'Встановити джерело метаданих за замовчуванням';
+
+  @override
+  String get default_audio_source => 'Джерело аудіо за замовчуванням';
+
+  @override
+  String get set_default_audio_source =>
+      'Встановити джерело аудіо за замовчуванням';
+
+  @override
+  String get set_default => 'Встановити за замовчуванням';
+
+  @override
+  String get support => 'Підтримка';
+
+  @override
+  String get support_plugin_development => 'Підтримати розробку плагіна';
+
+  @override
+  String can_access_name_api(Object name) {
+    return '- Може отримати доступ до **$name** API';
+  }
+
+  @override
+  String get do_you_want_to_install_this_plugin =>
+      'Ви хочете встановити цей плагін?';
+
+  @override
+  String get third_party_plugin_warning =>
+      'Цей плагін із стороннього репозиторію. Будь ласка, переконайтеся, що ви довіряєте джерелу перед встановленням.';
+
+  @override
+  String get author => 'Автор';
+
+  @override
+  String get this_plugin_can_do_following => 'Цей плагін може робити наступне';
+
+  @override
+  String get install => 'Встановити';
+
+  @override
+  String get install_a_metadata_provider => 'Встановити провайдера метаданих';
+
+  @override
+  String get no_tracks_playing => 'Наразі не відтворюється жоден трек';
+
+  @override
+  String get synced_lyrics_not_available =>
+      'Синхронізовані тексти недоступні для цієї пісні. Будь ласка, використовуйте вкладку';
+
+  @override
+  String get plain_lyrics => 'Звичайні тексти';
+
+  @override
+  String get tab_instead => 'замість цього.';
+
+  @override
+  String get disclaimer => 'Відмова від відповідальності';
+
+  @override
+  String get third_party_plugin_dmca_notice =>
+      'Команда Spotube не несе жодної відповідальності (включно з юридичною) за будь-які плагіни \"третіх сторін\".\nБудь ласка, використовуйте їх на свій страх і ризик. Про будь-які помилки/проблеми повідомляйте в репозиторій плагіна.\n\nЯкщо якийсь плагін \"третьої сторони\" порушує ToS/DMCA будь-якої служби/юридичної особи, будь ласка, попросіть автора плагіна \"третьої сторони\" або хостингову платформу, наприклад, GitHub/Codeberg, вжити заходів. Усі перераховані вище (позначені як \"треті сторони\") є плагінами, які підтримуються публічно/спільнотою. Ми не куруємо їх, тому не можемо вжити жодних заходів щодо них.\n\n';
+
+  @override
+  String get input_does_not_match_format =>
+      'Введені дані не відповідають необхідному формату';
+
+  @override
+  String get plugins => 'Плагіни';
+
+  @override
+  String get paste_plugin_download_url =>
+      'Вставте URL-адресу для завантаження або URL-адресу репозиторію GitHub/Codeberg або пряме посилання на файл .smplug';
+
+  @override
+  String get download_and_install_plugin_from_url =>
+      'Завантажити та встановити плагін з URL-адреси';
+
+  @override
+  String failed_to_add_plugin_error(Object error) {
+    return 'Не вдалося додати плагін: $error';
+  }
+
+  @override
+  String get upload_plugin_from_file => 'Завантажити плагін з файлу';
+
+  @override
+  String get installed => 'Встановлено';
+
+  @override
+  String get available_plugins => 'Доступні плагіни';
+
+  @override
+  String get configure_plugins =>
+      'Налаштуйте власні плагіни метаданих і аудіоджерела';
+
+  @override
+  String get audio_scrobblers => 'Аудіо скробблери';
+
+  @override
+  String get scrobbling => 'Скроблінг';
+
+  @override
+  String get source => 'Джерело: ';
+
+  @override
+  String get uncompressed => 'Без стиснення';
+
+  @override
+  String get dab_music_source_description =>
+      'Для аудіофілів. Забезпечує високоякісні/без втрат аудіопотоки. Точна відповідність треків на основі ISRC.';
 }

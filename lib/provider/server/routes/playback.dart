@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 
@@ -8,19 +9,16 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:metadata_god/metadata_god.dart';
 import 'package:path/path.dart';
 import 'package:shelf/shelf.dart';
-import 'package:spotube/extensions/artist_simple.dart';
-import 'package:spotube/extensions/image.dart';
-import 'package:spotube/extensions/track.dart';
+import 'package:spotube/models/metadata/metadata.dart';
 import 'package:spotube/models/parser/range_headers.dart';
 import 'package:spotube/provider/audio_player/audio_player.dart';
 import 'package:spotube/provider/audio_player/state.dart';
 
-import 'package:spotube/provider/server/active_sourced_track.dart';
-import 'package:spotube/provider/server/sourced_track.dart';
+import 'package:spotube/provider/server/active_track_sources.dart';
+import 'package:spotube/provider/server/sourced_track_provider.dart';
 import 'package:spotube/provider/user_preferences/user_preferences_provider.dart';
 import 'package:spotube/services/audio_player/audio_player.dart';
 import 'package:spotube/services/logger/logger.dart';
-import 'package:spotube/services/sourced_track/enums.dart';
 import 'package:spotube/services/sourced_track/sourced_track.dart';
 import 'package:spotube/utils/service_utils.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
@@ -46,175 +44,286 @@ class ServerPlaybackRoutes {
 
   ServerPlaybackRoutes(this.ref) : dio = Dio();
 
-  Future<({dio_lib.Response<Uint8List> response, Uint8List? bytes})>
-      streamTrack(
-    SourcedTrack track,
-    Map<String, dynamic> headers,
-  ) async {
-    final trackCacheFile = File(
-      join(
-        await UserPreferencesNotifier.getMusicCacheDir(),
-        ServiceUtils.sanitizeFilename(
-          '${track.name} - ${track.artists?.asString()} (${track.sourceInfo.id}).${track.codec.name}',
-        ),
+  Future<String> _getTrackCacheFilePath(SourcedTrack track) async {
+    return join(
+      await UserPreferencesNotifier.getMusicCacheDir(),
+      ServiceUtils.sanitizeFilename(
+        '${track.query.name} - ${track.query.artists.map((d) => d.name).join(",")} (${track.info.id}).${track.qualityPreset!.getFileExtension()}',
       ),
     );
-    final trackPartialCacheFile = File("${trackCacheFile.path}.part");
+  }
 
-    var options = Options(
+  Future<SourcedTrack?> _getSourcedTrack(
+    Request request,
+    String trackId,
+  ) async {
+    final track =
+        playlist.tracks.firstWhere((element) => element.id == trackId);
+
+    final activeSourcedTrack =
+        await ref.read(activeTrackSourcesProvider.future);
+
+    final media = audioPlayer.playlist.medias
+        .firstWhere((e) => e.uri == request.requestedUri.toString());
+    final spotubeMedia =
+        media is SpotubeMedia ? media : SpotubeMedia.media(media);
+    final sourcedTrack = activeSourcedTrack?.track.id == track.id
+        ? activeSourcedTrack?.source
+        : await ref.read(
+            sourcedTrackProvider(spotubeMedia.track as SpotubeFullTrackObject)
+                .future,
+          );
+
+    return sourcedTrack;
+  }
+
+  Future<dio_lib.Response> streamTrackInformation(
+    Request request,
+    SourcedTrack track,
+  ) async {
+    AppLogger.log.i(
+      "HEAD request for track: ${track.query.name}\n"
+      "Headers: ${request.headers}",
+    );
+
+    final trackCacheFile = File(await _getTrackCacheFilePath(track));
+
+    if (await trackCacheFile.exists() && userPreferences.cacheMusic) {
+      final fileLength = await trackCacheFile.length();
+
+      return dio_lib.Response(
+        statusCode: 200,
+        headers: Headers.fromMap({
+          "content-type": ["audio/${track.qualityPreset!.name}"],
+          "content-length": ["$fileLength"],
+          "accept-ranges": ["bytes"],
+          "content-range": ["bytes 0-$fileLength/$fileLength"],
+        }),
+        requestOptions: RequestOptions(path: request.requestedUri.toString()),
+      );
+    }
+
+    String url = track.url ??
+        await ref
+            .read(sourcedTrackProvider(track.query).notifier)
+            .swapWithNextSibling()
+            .then((track) => track.url!);
+
+    final options = Options(
       headers: {
-        ...headers,
         "user-agent": _randomUserAgent,
         "Cache-Control": "max-age=3600",
         "Connection": "keep-alive",
-        "host": Uri.parse(track.url).host,
+        "host": Uri.parse(url).host,
       },
-      responseType: ResponseType.bytes,
       validateStatus: (status) => status! < 400,
     );
 
-    final headersRes = await Future<dio_lib.Response?>.value(
-      dio.head(
-        track.url,
-        options: options,
-      ),
-    ).catchError((_) async => null);
+    final res = await dio.head(url, options: options);
 
-    final contentLength = headersRes?.headers.value("content-length");
+    return res;
+  }
+
+  Future<dio_lib.Response> streamTrack(
+    Request request,
+    SourcedTrack track,
+    Map<String, dynamic> headers,
+  ) async {
+    AppLogger.log.i(
+      "GET request for track: ${track.query.name}\n"
+      "Headers: ${request.headers}",
+    );
+
+    final trackCacheFile = File(await _getTrackCacheFilePath(track));
 
     if (await trackCacheFile.exists() && userPreferences.cacheMusic) {
       final bytes = await trackCacheFile.readAsBytes();
       final cachedFileLength = bytes.length;
 
-      return (
-        response: dio_lib.Response<Uint8List>(
-          statusCode: 200,
-          headers: Headers.fromMap({
-            "content-type": ["audio/${track.codec.name}"],
-            "content-length": ["$cachedFileLength"],
-            "accept-ranges": ["bytes"],
-            "content-range": ["bytes 0-$cachedFileLength/$cachedFileLength"],
-          }),
-          requestOptions: RequestOptions(path: track.url),
-        ),
-        bytes: bytes,
+      return dio_lib.Response<Uint8List>(
+        statusCode: 200,
+        headers: Headers.fromMap({
+          "content-type": ["audio/${track.qualityPreset!.name}"],
+          "content-length": ["${cachedFileLength - 1}"],
+          "accept-ranges": ["bytes"],
+          "content-range": [
+            "bytes 0-${cachedFileLength - 1}/$cachedFileLength"
+          ],
+          "connection": ["close"],
+        }),
+        requestOptions: RequestOptions(path: request.requestedUri.toString()),
+        data: bytes,
       );
     }
 
-    /// Forcing partial content range as mpv sometimes greedily wants
-    /// everything at one go. Slows down overall streaming.
-    final range = RangeHeader.parse(headers["range"] ?? "");
-    final contentPartialLength = int.tryParse(contentLength ?? "");
-    if ((range.end == null) &&
-        contentPartialLength != null &&
-        range.start == 0) {
-      options = options.copyWith(
-        headers: {
-          ...?options.headers,
-          "range": "$range${(contentPartialLength * 0.3).ceil()}",
-        },
-      );
-    }
+    String url = track.url ??
+        await ref
+            .read(sourcedTrackProvider(track.query).notifier)
+            .swapWithNextSibling()
+            .then((track) => track.url!);
 
-    final res = await dio
-        .get<Uint8List>(
-      track.url,
-      options: options.copyWith(headers: {
-        ...?options.headers,
+    final options = Options(
+      headers: {
+        ...headers,
         "user-agent": _randomUserAgent,
-      }),
-    )
-        .catchError((e, stack) async {
+        "Cache-Control": "max-age=3600",
+        "Connection": "keep-alive",
+        "host": Uri.parse(url).host,
+      },
+      responseType: ResponseType.stream,
+      validateStatus: (status) => status! < 400,
+    );
+
+    final contentLengthRes = await Future<dio_lib.Response?>.value(
+      dio.head(
+        url,
+        options: options.copyWith(responseType: ResponseType.bytes),
+      ),
+    ).catchError((e, stack) async {
       AppLogger.reportError(e, stack);
+
       final sourcedTrack = await ref
-          .read(sourcedTrackProvider(SpotubeMedia(track)).notifier)
+          .read(sourcedTrackProvider(track.query).notifier)
           .refreshStreamingUrl();
 
-      if (playlist.activeTrack?.id == sourcedTrack?.id &&
-          sourcedTrack != null) {
-        ref.read(activeSourcedTrackProvider.notifier).update(sourcedTrack);
-      }
+      url = sourcedTrack.url!;
 
-      return await dio.get<Uint8List>(
-        sourcedTrack!.url,
-        options: options.copyWith(headers: {
-          ...?options.headers,
-          "user-agent": _randomUserAgent,
-        }),
-      );
+      return dio.head(url, options: options);
     });
 
-    final bytes = res.data;
-
-    if (bytes == null || !userPreferences.cacheMusic) {
-      return (response: res, bytes: bytes);
+    // Redirect to m3u8 link directly as it handles range requests internally
+    if (contentLengthRes?.headers.value("content-type") ==
+        "application/vnd.apple.mpegurl") {
+      return dio_lib.Response<Uint8List>(
+        statusCode: 301,
+        statusMessage: "M3U8 Redirect",
+        headers: Headers.fromMap({
+          "location": [url],
+          "content-type": ["application/vnd.apple.mpegurl"],
+        }),
+        requestOptions: RequestOptions(path: request.requestedUri.toString()),
+        isRedirect: true,
+      );
     }
 
-    final contentRange =
-        ContentRangeHeader.parse(res.headers.value("content-range") ?? "");
+    final res = await dio.get<ResponseBody>(url, options: options);
 
+    AppLogger.log.i(
+      "Response for track: ${track.query.name}\n"
+      "Status Code: ${res.statusCode}\n"
+      "Headers: ${res.headers.map}",
+    );
+
+    if (!userPreferences.cacheMusic) {
+      return res;
+    }
+
+    final resStream = res.data!.stream.asBroadcastStream();
+
+    final trackPartialCacheFile = File("${trackCacheFile.path}.part");
     if (!await trackPartialCacheFile.exists()) {
       await trackPartialCacheFile.create(recursive: true);
     }
 
     // Write the stream to the file based on the range
-    final partialCacheFile =
-        await trackPartialCacheFile.open(mode: FileMode.writeOnlyAppend);
-    int fileLength = 0;
+    final partialCacheFileSink =
+        trackPartialCacheFile.openWrite(mode: FileMode.writeOnlyAppend);
+    final contentRange = res.headers.value("content-range") != null
+        ? ContentRangeHeader.parse(res.headers.value("content-range") ?? "")
+        : ContentRangeHeader(0, 0, 0);
+
+    resStream.listen(
+      (data) {
+        partialCacheFileSink.add(data);
+      },
+      onError: (e, stack) {
+        partialCacheFileSink.close();
+      },
+      onDone: () async {
+        await partialCacheFileSink.close();
+
+        final fileLength = await trackPartialCacheFile.length();
+        if (fileLength != contentRange.total) return;
+
+        await trackPartialCacheFile.rename(trackCacheFile.path);
+
+        if (track.qualityPreset!.getFileExtension() == "weba") return;
+
+        final imageBytes = await ServiceUtils.downloadImage(
+          track.query.album.images.asUrlString(
+            placeholder: ImagePlaceholder.albumArt,
+            index: 1,
+          ),
+        );
+
+        await MetadataGod.writeMetadata(
+          file: trackCacheFile.path,
+          metadata: track.query.toMetadata(
+            imageBytes: imageBytes,
+            fileLength: fileLength,
+          ),
+        ).catchError((e, stackTrace) {
+          AppLogger.reportError(e, stackTrace);
+        });
+      },
+      cancelOnError: true,
+    );
+
+    res.data?.stream =
+        resStream; // To avoid Stream has been already listened to exception
+    return res;
+  }
+
+  /// @head('/stream/<trackId>')
+  Future<Response> headStreamTrackId(Request request, String trackId) async {
     try {
-      await partialCacheFile.setPosition(contentRange.start);
-      await partialCacheFile.writeFrom(bytes);
-      fileLength = await partialCacheFile.length();
-    } finally {
-      await partialCacheFile.close();
-    }
+      final sourcedTrack = await _getSourcedTrack(request, trackId);
 
-    if (fileLength == contentRange.total) {
-      await trackPartialCacheFile.rename(trackCacheFile.path);
-    }
+      if (sourcedTrack == null) {
+        return Response.notFound("Track not found in the current queue");
+      }
 
-    if (contentRange.total == fileLength && track.codec != SourceCodecs.weba) {
-      final imageBytes = await ServiceUtils.downloadImage(
-        (track.album?.images).asUrlString(
-          placeholder: ImagePlaceholder.albumArt,
-          index: 1,
-        ),
+      final res = await streamTrackInformation(
+        request,
+        sourcedTrack,
       );
 
-      await MetadataGod.writeMetadata(
-        file: trackCacheFile.path,
-        metadata: track.toMetadata(
-          fileLength: fileLength,
-          imageBytes: imageBytes,
-        ),
+      return Response(
+        res.statusCode!,
+        headers: res.headers.map,
       );
+    } catch (e, stack) {
+      AppLogger.reportError(e, stack);
+      return Response.internalServerError();
     }
-
-    return (bytes: bytes, response: res);
   }
 
   /// @get('/stream/<trackId>')
   Future<Response> getStreamTrackId(Request request, String trackId) async {
     try {
-      final track =
-          playlist.tracks.firstWhere((element) => element.id == trackId);
+      final sourcedTrack = await _getSourcedTrack(request, trackId);
 
-      final activeSourcedTrack = ref.read(activeSourcedTrackProvider);
-      final sourcedTrack = activeSourcedTrack?.id == track.id
-          ? activeSourcedTrack
-          : await ref.read(sourcedTrackProvider(SpotubeMedia(track)).future);
-
-      if (playlist.activeTrack?.id == sourcedTrack?.id &&
-          sourcedTrack != null) {
-        ref.read(activeSourcedTrackProvider.notifier).update(sourcedTrack);
+      if (sourcedTrack == null) {
+        return Response.notFound("Track not found in the current queue");
       }
 
-      final (bytes: audioBytes, response: res) =
-          await streamTrack(sourcedTrack!, request.headers);
+      final res = await streamTrack(
+        request,
+        sourcedTrack,
+        request.headers,
+      );
+
+      if (res.data is ResponseBody) {
+        return Response(
+          res.statusCode!,
+          body: (res.data as ResponseBody).stream,
+          headers: res.headers.map,
+        );
+      }
 
       return Response(
         res.statusCode!,
-        body: audioBytes,
+        body: res.data,
         headers: res.headers.map,
       );
     } catch (e, stack) {

@@ -1,3 +1,12 @@
+#Flutter Wrapper
+# -keep class io.flutter.app.** { *; }
+-keep class io.flutter.plugin.**  { *; }
+-keep class io.flutter.util.**  { *; }
+-keep class io.flutter.view.**  { *; }
+# -keep class io.flutter.**  { *; }
+-keep class io.flutter.plugins.**  { *; }
+-keep class de.prosiebensat1digital.** { *; }
+
 -keep class androidx.lifecycle.DefaultLifecycleObserver
 
 -keepnames class kotlinx.serialization.** { *; }
@@ -18,6 +27,7 @@
 -keep class org.schabi.newpipe.extractor.timeago.patterns.** { *; }
 -keep class org.mozilla.javascript.** { *; }
 -keep class org.mozilla.classfile.ClassFileWriter
+-dontwarn com.google.re2j.**
 -dontwarn org.mozilla.javascript.tools.**
 
 -dontwarn javax.script.AbstractScriptEngine

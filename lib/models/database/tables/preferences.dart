@@ -11,15 +11,6 @@ enum CloseBehavior {
   close,
 }
 
-enum AudioSource {
-  youtube,
-  piped,
-  jiosaavn,
-  invidious;
-
-  String get label => name[0].toUpperCase() + name.substring(1);
-}
-
 enum YoutubeClientEngine {
   ytDlp("yt-dlp"),
   youtubeExplode("YouTubeExplode"),
@@ -39,14 +30,6 @@ enum YoutubeClientEngine {
   }
 }
 
-enum MusicCodec {
-  m4a._("M4a (Best for downloaded music)"),
-  weba._("WebA (Best for streamed music)\nDoesn't support audio metadata");
-
-  final String label;
-  const MusicCodec._(this.label);
-}
-
 enum SearchMode {
   youtube._("YouTube"),
   youtubeMusic._("YouTube Music");
@@ -62,8 +45,6 @@ enum SearchMode {
 
 class PreferencesTable extends Table {
   IntColumn get id => integer().autoIncrement()();
-  TextColumn get audioQuality => textEnum<SourceQualities>()
-      .withDefault(Constant(SourceQualities.high.name))();
   BoolColumn get albumColorSync =>
       boolean().withDefault(const Constant(true))();
   BoolColumn get amoledDarkTheme =>
@@ -79,7 +60,7 @@ class PreferencesTable extends Table {
   TextColumn get closeBehavior => textEnum<CloseBehavior>()
       .withDefault(Constant(CloseBehavior.close.name))();
   TextColumn get accentColorScheme => text()
-      .withDefault(const Constant("Orange:0xFFf97315"))
+      .withDefault(const Constant("Slate:0xff64748b"))
       .map(const SpotubeColorConverter())();
   TextColumn get layoutMode =>
       textEnum<LayoutMode>().withDefault(Constant(LayoutMode.adaptive.name))();
@@ -95,20 +76,11 @@ class PreferencesTable extends Table {
   TextColumn get downloadLocation => text().withDefault(const Constant(""))();
   TextColumn get localLibraryLocation =>
       text().withDefault(const Constant("")).map(const StringListConverter())();
-  TextColumn get pipedInstance =>
-      text().withDefault(const Constant("https://pipedapi.kavin.rocks"))();
-  TextColumn get invidiousInstance =>
-      text().withDefault(const Constant("https://inv.nadeko.net"))();
   TextColumn get themeMode =>
       textEnum<ThemeMode>().withDefault(Constant(ThemeMode.system.name))();
-  TextColumn get audioSource =>
-      textEnum<AudioSource>().withDefault(Constant(AudioSource.youtube.name))();
+  TextColumn get audioSourceId => text().nullable()();
   TextColumn get youtubeClientEngine => textEnum<YoutubeClientEngine>()
       .withDefault(Constant(YoutubeClientEngine.youtubeExplode.name))();
-  TextColumn get streamMusicCodec =>
-      textEnum<SourceCodecs>().withDefault(Constant(SourceCodecs.weba.name))();
-  TextColumn get downloadMusicCodec =>
-      textEnum<SourceCodecs>().withDefault(Constant(SourceCodecs.m4a.name))();
   BoolColumn get discordPresence =>
       boolean().withDefault(const Constant(true))();
   BoolColumn get endlessPlayback =>
@@ -122,7 +94,6 @@ class PreferencesTable extends Table {
   static PreferencesTableData defaults() {
     return PreferencesTableData(
       id: 0,
-      audioQuality: SourceQualities.high,
       albumColorSync: true,
       amoledDarkTheme: false,
       checkUpdate: true,
@@ -131,20 +102,18 @@ class PreferencesTable extends Table {
       systemTitleBar: false,
       skipNonMusic: false,
       closeBehavior: CloseBehavior.close,
-      accentColorScheme: SpotubeColor(Colors.orange.value, name: "Orange"),
+      accentColorScheme: SpotubeColor(Colors.slate.value, name: "Slate"),
       layoutMode: LayoutMode.adaptive,
       locale: const Locale("system", "system"),
       market: Market.US,
       searchMode: SearchMode.youtube,
       downloadLocation: "",
       localLibraryLocation: [],
-      pipedInstance: "https://pipedapi.kavin.rocks",
-      invidiousInstance: "https://inv.nadeko.net",
       themeMode: ThemeMode.system,
-      audioSource: AudioSource.youtube,
-      youtubeClientEngine: YoutubeClientEngine.youtubeExplode,
-      streamMusicCodec: SourceCodecs.m4a,
-      downloadMusicCodec: SourceCodecs.m4a,
+      audioSourceId: null,
+      youtubeClientEngine: kIsIOS
+          ? YoutubeClientEngine.youtubeExplode
+          : YoutubeClientEngine.newPipe,
       discordPresence: true,
       endlessPlayback: true,
       enableConnect: false,

@@ -185,7 +185,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get follow => 'பின்தொடர்';
 
   @override
-  String get artist_url_copied => 'கலைஞர் URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது';
+  String get artist_url_copied =>
+      'கலைஞர் URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது';
 
   @override
   String added_to_queue(Object tracks) {
@@ -380,12 +381,6 @@ class AppLocalizationsTa extends AppLocalizations {
   String get account => 'கணக்கு';
 
   @override
-  String get login_with_spotify => 'உங்கள் Spotify கணக்கில் உள்நுழைக';
-
-  @override
-  String get connect_with_spotify => 'Spotify உடன் இணைக்கவும்';
-
-  @override
   String get logout => 'வெளியேறு';
 
   @override
@@ -443,7 +438,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get sync_album_color => 'ஆல்பம் நிறத்தை ஒத்திசை';
 
   @override
-  String get sync_album_color_description => 'ஆல்பம் படத்தின் முக்கிய நிறத்தை அழுத்த நிறமாகப் பயன்படுத்துகிறது';
+  String get sync_album_color_description =>
+      'ஆல்பம் படத்தின் முக்கிய நிறத்தை அழுத்த நிறமாகப் பயன்படுத்துகிறது';
 
   @override
   String get playback => 'பின்னணி';
@@ -461,16 +457,19 @@ class AppLocalizationsTa extends AppLocalizations {
   String get pre_download_play => 'முன்பதிவிறக்கம் மற்றும் இயக்கம்';
 
   @override
-  String get pre_download_play_description => 'ஒலியை ஸ்ட்ரீம் செய்வதற்குப் பதிலாக, பைட்டுகளைப் பதிவிறக்கி இயக்கவும் (அதிக பேண்ட்விட்த் பயனர்களுக்கு பரிந்துரைக்கப்படுகிறது)';
+  String get pre_download_play_description =>
+      'ஒலியை ஸ்ட்ரீம் செய்வதற்குப் பதிலாக, பைட்டுகளைப் பதிவிறக்கி இயக்கவும் (அதிக பேண்ட்விட்த் பயனர்களுக்கு பரிந்துரைக்கப்படுகிறது)';
 
   @override
   String get skip_non_music => 'இசையல்லாத பகுதிகளைத் தவிர் (SponsorBlock)';
 
   @override
-  String get blacklist_description => 'தடைசெய்யப்பட்ட பாடல்கள் மற்றும் கலைஞர்கள்';
+  String get blacklist_description =>
+      'தடைசெய்யப்பட்ட பாடல்கள் மற்றும் கலைஞர்கள்';
 
   @override
-  String get wait_for_download_to_finish => 'தற்போதைய பதிவிறக்கம் முடியும் வரை காத்திருக்கவும்';
+  String get wait_for_download_to_finish =>
+      'தற்போதைய பதிவிறக்கம் முடியும் வரை காத்திருக்கவும்';
 
   @override
   String get desktop => 'கணினி';
@@ -491,7 +490,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get about => 'பற்றி';
 
   @override
-  String get u_love_spotube => 'நீங்கள் Spotube ஐ நேசிக்கிறீர்கள் என்பது எங்களுக்குத் தெரியும்';
+  String get u_love_spotube =>
+      'நீங்கள் Spotube ஐ நேசிக்கிறீர்கள் என்பது எங்களுக்குத் தெரியும்';
 
   @override
   String get check_for_updates => 'புதுப்பிப்புகளைச் சரிபார்';
@@ -506,7 +506,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get please_sponsor => 'தயவுசெய்து ஆதரவு/நன்கொடை அளியுங்கள்';
 
   @override
-  String get spotube_description => 'Spotube, ஒரு லேசான, பல தளங்களில் இயங்கும், அனைவருக்கும் இலவசமான spotify கிளையன்ட்';
+  String get spotube_description =>
+      'Spotube, ஒரு லேசான, பல தளங்களில் இயங்கும், அனைவருக்கும் இலவசமான spotify கிளையன்ட்';
 
   @override
   String get version => 'பதிப்பு';
@@ -538,21 +539,15 @@ class AppLocalizationsTa extends AppLocalizations {
   String get license => 'உரிமம்';
 
   @override
-  String get add_spotify_credentials => 'தொடங்குவதற்கு உங்கள் spotify சான்றுகளைச் சேர்க்கவும்';
-
-  @override
-  String get credentials_will_not_be_shared_disclaimer => 'கவலைப்பட வேண்டாம், உங்கள் சான்றுகள் எதுவும் சேகரிக்கப்படாது அல்லது யாருடனும் பகிரப்படாது';
+  String get credentials_will_not_be_shared_disclaimer =>
+      'கவலைப்பட வேண்டாம், உங்கள் சான்றுகள் எதுவும் சேகரிக்கப்படாது அல்லது யாருடனும் பகிரப்படாது';
 
   @override
   String get know_how_to_login => 'இதை எப்படி செய்வது என்று தெரியவில்லையா?';
 
   @override
-  String get follow_step_by_step_guide => 'படிப்படியான வழிகாட்டியைப் பின்பற்றவும்';
-
-  @override
-  String spotify_cookie(Object name) {
-    return 'Spotify $name நட்புநிரல்';
-  }
+  String get follow_step_by_step_guide =>
+      'படிப்படியான வழிகாட்டியைப் பின்பற்றவும்';
 
   @override
   String cookie_name_cookie(Object name) {
@@ -584,52 +579,29 @@ class AppLocalizationsTa extends AppLocalizations {
   String get first_go_to => 'முதலில், செல்லவேண்டியது';
 
   @override
-  String get login_if_not_logged_in => 'நீங்கள் உள்நுழையவில்லை என்றால் உள்நுழைக/பதிவுசெய்க';
-
-  @override
-  String get step_2 => 'இரண்டாம் படி';
-
-  @override
-  String get step_2_steps => '1. நீங்கள் உள்நுழைந்தவுடன், F12 ஐ அழுத்தவும் அல்லது வலது கிளிக் செய்து > ஆய்வு செய்யவும் உலாவி டெவ்டூல்களைத் திறக்கவும்.\n2. பின்னர் \"பயன்பாடு\" தாவலுக்குச் செல்லவும் (Chrome, Edge, Brave போன்றவை) அல்லது \"சேமிப்பகம்\" தாவல் (Firefox, Palemoon போன்றவை)\n3. \"குக்கிகள்\" பிரிவுக்குச் சென்று பின்னர் \"https://accounts.spotify.com\" பிரிவுக்குச் செல்லவும்';
-
-  @override
-  String get step_3 => 'மூன்றாம் படி';
-
-  @override
-  String get step_3_steps => '\"sp_dc\" நட்புநிரலின் மதிப்பை நகலெடுக்கவும்';
-
-  @override
-  String get success_emoji => 'வெற்றி🥳';
-
-  @override
-  String get success_message => 'இப்போது நீங்கள் உங்கள் Spotify கணக்கில் வெற்றிகரமாக உள்நுழைந்துள்ளீர்கள். நல்லது, நண்பரே!';
-
-  @override
-  String get step_4 => 'நான்காம் படி';
-
-  @override
-  String get step_4_steps => 'நகலெடுக்கப்பட்ட \"sp_dc\" மதிப்பை ஒட்டவும்';
-
-  @override
   String get something_went_wrong => 'ஏதோ தவறு நடந்துவிட்டது';
 
   @override
   String get piped_instance => 'Piped சேவையகம் நிகழ்வு';
 
   @override
-  String get piped_description => 'பாடல் பொருத்தத்திற்குப் பயன்படுத்த வேண்டிய Piped சேவையகம் நிகழ்வு';
+  String get piped_description =>
+      'பாடல் பொருத்தத்திற்குப் பயன்படுத்த வேண்டிய Piped சேவையகம் நிகழ்வு';
 
   @override
-  String get piped_warning => 'அவற்றில் சில நன்றாக வேலை செய்யாமல் இருக்கலாம். எனவே உங்கள் சொந்த ஆபத்தில் பயன்படுத்தவும்';
+  String get piped_warning =>
+      'அவற்றில் சில நன்றாக வேலை செய்யாமல் இருக்கலாம். எனவே உங்கள் சொந்த ஆபத்தில் பயன்படுத்தவும்';
 
   @override
   String get invidious_instance => 'Invidious சேவையக நிகழ்வு';
 
   @override
-  String get invidious_description => 'பாடல் பொருத்தத்திற்குப் பயன்படுத்த வேண்டிய Invidious சேவையக நிகழ்வு';
+  String get invidious_description =>
+      'பாடல் பொருத்தத்திற்குப் பயன்படுத்த வேண்டிய Invidious சேவையக நிகழ்வு';
 
   @override
-  String get invidious_warning => 'அவற்றில் சில நன்றாக வேலை செய்யாமல் இருக்கலாம். எனவே உங்கள் சொந்த ஆபத்தில் பயன்படுத்தவும்';
+  String get invidious_warning =>
+      'அவற்றில் சில நன்றாக வேலை செய்யாமல் இருக்கலாம். எனவே உங்கள் சொந்த ஆபத்தில் பயன்படுத்தவும்';
 
   @override
   String get generate => 'உருவாக்கு';
@@ -640,13 +612,16 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get replace_downloaded_tracks => 'பதிவிறக்கம் செய்யப்பட்ட அனைத்து பாடல்களையும் மாற்றவும்';
+  String get replace_downloaded_tracks =>
+      'பதிவிறக்கம் செய்யப்பட்ட அனைத்து பாடல்களையும் மாற்றவும்';
 
   @override
-  String get skip_download_tracks => 'பதிவிறக்கம் செய்யப்பட்ட அனைத்து பாடல்களையும் தவிர்க்கவும்';
+  String get skip_download_tracks =>
+      'பதிவிறக்கம் செய்யப்பட்ட அனைத்து பாடல்களையும் தவிர்க்கவும்';
 
   @override
-  String get do_you_want_to_replace => 'ஏற்கனவே உள்ள பாடலை மாற்ற விரும்புகிறீர்களா?';
+  String get do_you_want_to_replace =>
+      'ஏற்கனவே உள்ள பாடலை மாற்ற விரும்புகிறீர்களா?';
 
   @override
   String get replace => 'மாற்று';
@@ -669,7 +644,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get country => 'நாடு';
 
   @override
-  String get number_of_tracks_generate => 'உருவாக்க வேண்டிய பாடல்களின் எண்ணிக்கை';
+  String get number_of_tracks_generate =>
+      'உருவாக்க வேண்டிய பாடல்களின் எண்ணிக்கை';
 
   @override
   String get acousticness => 'அகவுஸ்டிக்னெஸ்';
@@ -744,7 +720,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get are_you_sure => 'உறுதியாக இருக்கிறீர்களா?';
 
   @override
-  String get generating_playlist => 'உங்கள் தனிப்பயன்பாட்டிற்கான பாடல் பட்டியலை உருவாக்குகிறது...';
+  String get generating_playlist =>
+      'உங்கள் தனிப்பயன்பாட்டிற்கான பாடல் பட்டியலை உருவாக்குகிறது...';
 
   @override
   String selected_count_tracks(Object count) {
@@ -752,22 +729,28 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get download_warning => 'நீங்கள் அனைத்து பாடல்களையும் மொத்தமாக பதிவிறக்கினால், நீங்கள் தெளிவாக இசையைத் திருடுகிறீர்கள் மற்றும் இசையின் படைப்பாற்றல் சமூகத்திற்கு சேதம் விளைவிக்கிறீர்கள். நீங்கள் இதை அறிந்திருக்கிறீர்கள் என்று நம்புகிறேன். எப்போதும், கலைஞரின் கடின உழைப்பை மதித்து ஆதரிக்க முயற்சி செய்யுங்கள்';
+  String get download_warning =>
+      'நீங்கள் அனைத்து பாடல்களையும் மொத்தமாக பதிவிறக்கினால், நீங்கள் தெளிவாக இசையைத் திருடுகிறீர்கள் மற்றும் இசையின் படைப்பாற்றல் சமூகத்திற்கு சேதம் விளைவிக்கிறீர்கள். நீங்கள் இதை அறிந்திருக்கிறீர்கள் என்று நம்புகிறேன். எப்போதும், கலைஞரின் கடின உழைப்பை மதித்து ஆதரிக்க முயற்சி செய்யுங்கள்';
 
   @override
-  String get download_ip_ban_warning => 'மேலும், அதிகப்படியான பதிவிறக்க கோரிக்கைகள் காரணமாக உங்கள் IP YouTube இல் தடைசெய்யப்படலாம். IP தடை என்பது குறைந்தது 2-3 மாதங்களுக்கு அந்த IP சாதனத்திலிருந்து YouTube ஐப் பயன்படுத்த முடியாது (நீங்கள் உள்நுழைந்திருந்தாலும் கூட). இது ஒருபோதும் நடந்தால் Spotube பொறுப்பேற்காது';
+  String get download_ip_ban_warning =>
+      'மேலும், அதிகப்படியான பதிவிறக்க கோரிக்கைகள் காரணமாக உங்கள் IP YouTube இல் தடைசெய்யப்படலாம். IP தடை என்பது குறைந்தது 2-3 மாதங்களுக்கு அந்த IP சாதனத்திலிருந்து YouTube ஐப் பயன்படுத்த முடியாது (நீங்கள் உள்நுழைந்திருந்தாலும் கூட). இது ஒருபோதும் நடந்தால் Spotube பொறுப்பேற்காது';
 
   @override
-  String get by_clicking_accept_terms => '\'ஏற்றுக்கொள்\' என்பதைக் கிளிக் செய்வதன் மூலம் பின்வரும் விதிமுறைகளுக்கு நீங்கள் ஒப்புக்கொள்கிறீர்கள்:';
+  String get by_clicking_accept_terms =>
+      '\'ஏற்றுக்கொள்\' என்பதைக் கிளிக் செய்வதன் மூலம் பின்வரும் விதிமுறைகளுக்கு நீங்கள் ஒப்புக்கொள்கிறீர்கள்:';
 
   @override
-  String get download_agreement_1 => 'நான் இசையைத் திருடுகிறேன் என்பது எனக்குத் தெரியும். நான் கெட்டவன்';
+  String get download_agreement_1 =>
+      'நான் இசையைத் திருடுகிறேன் என்பது எனக்குத் தெரியும். நான் கெட்டவன்';
 
   @override
-  String get download_agreement_2 => 'நான் கலைஞரை முடிந்தவரை ஆதரிப்பேன், அவர்களின் கலைக்கு பணம் செலுத்த எனக்கு பணம் இல்லாததால் மட்டுமே இதைச் செய்கிறேன்';
+  String get download_agreement_2 =>
+      'நான் கலைஞரை முடிந்தவரை ஆதரிப்பேன், அவர்களின் கலைக்கு பணம் செலுத்த எனக்கு பணம் இல்லாததால் மட்டுமே இதைச் செய்கிறேன்';
 
   @override
-  String get download_agreement_3 => 'என் IP YouTube இல் தடைசெய்யப்படலாம் என்பதை நான் முழுமையாக அறிவேன், மேலும் என் தற்போதைய செயலால் ஏற்படும் எந்த விபத்துகளுக்கும் Spotube அல்லது அதன் உரிமையாளர்கள்/பங்களிப்பாளர்களை பொறுப்பாக்க மாட்டேன்';
+  String get download_agreement_3 =>
+      'என் IP YouTube இல் தடைசெய்யப்படலாம் என்பதை நான் முழுமையாக அறிவேன், மேலும் என் தற்போதைய செயலால் ஏற்படும் எந்த விபத்துகளுக்கும் Spotube அல்லது அதன் உரிமையாளர்கள்/பங்களிப்பாளர்களை பொறுப்பாக்க மாட்டேன்';
 
   @override
   String get decline => 'மறு';
@@ -848,7 +831,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get failed_to_encrypt => 'குறியாக்கம் தோல்வியடைந்தது';
 
   @override
-  String get encryption_failed_warning => 'Spotube உங்கள் தரவை பாதுகாப்பாக சேமிக்க குறியாக்கத்தைப் பயன்படுத்துகிறது. ஆனால் அவ்வாறு செய்ய முடியவில்லை. எனவே இது பாதுகாப்பற்ற சேமிப்பகத்திற்கு மாறும்\nநீங்கள் லினக்ஸ் பயன்படுத்துகிறீர்கள் என்றால், எந்த ரகசிய சேவையும் (gnome-keyring, kde-wallet, keepassxc போன்றவை) நிறுவப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்';
+  String get encryption_failed_warning =>
+      'Spotube உங்கள் தரவை பாதுகாப்பாக சேமிக்க குறியாக்கத்தைப் பயன்படுத்துகிறது. ஆனால் அவ்வாறு செய்ய முடியவில்லை. எனவே இது பாதுகாப்பற்ற சேமிப்பகத்திற்கு மாறும்\nநீங்கள் லினக்ஸ் பயன்படுத்துகிறீர்கள் என்றால், எந்த ரகசிய சேவையும் (gnome-keyring, kde-wallet, keepassxc போன்றவை) நிறுவப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்';
 
   @override
   String get querying_info => 'தகவலைக் கேட்கிறது...';
@@ -895,10 +879,16 @@ class AppLocalizationsTa extends AppLocalizations {
   String get restore_defaults => 'இயல்புநிலைகளை மீட்டமை';
 
   @override
-  String get download_music_codec => 'இசை கோடெக்கை பதிவிறக்கு';
+  String get download_music_format => 'இசை பதிவிறக்க வடிவம்';
 
   @override
-  String get streaming_music_codec => 'இசை கோடெக்கை ஸ்ட்ரீம் செய்';
+  String get streaming_music_format => 'இசை ஸ்ட்ரீமிங் வடிவம்';
+
+  @override
+  String get download_music_quality => 'பதிவிறக்க தரம்';
+
+  @override
+  String get streaming_music_quality => 'ஸ்ட்ரீமிங் தரம்';
 
   @override
   String get login_with_lastfm => 'Last.fm உடன் உள்நுழைக';
@@ -946,7 +936,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get friends => 'நண்பர்கள்';
 
   @override
-  String get no_lyrics_available => 'மன்னிக்கவும், இந்தப் பாடலுக்கான பாடல் வரிகளைக் கண்டுபிடிக்க முடியவில்லை';
+  String get no_lyrics_available =>
+      'மன்னிக்கவும், இந்தப் பாடலுக்கான பாடல் வரிகளைக் கண்டுபிடிக்க முடியவில்லை';
 
   @override
   String get start_a_radio => 'வானொலியைத் தொடங்கு';
@@ -955,7 +946,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get how_to_start_radio => 'வானொலியை எவ்வாறு தொடங்க விரும்புகிறீர்கள்?';
 
   @override
-  String get replace_queue_question => 'தற்போதைய வரிசையை மாற்ற விரும்புகிறீர்களா அல்லது அதனுடன் சேர்க்க விரும்புகிறீர்களா?';
+  String get replace_queue_question =>
+      'தற்போதைய வரிசையை மாற்ற விரும்புகிறீர்களா அல்லது அதனுடன் சேர்க்க விரும்புகிறீர்களா?';
 
   @override
   String get endless_playback => 'முடிவற்ற இயக்கம்';
@@ -964,7 +956,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get delete_playlist => 'பாடல் பட்டியலை நீக்கு';
 
   @override
-  String get delete_playlist_confirmation => 'இந்த பாடல் பட்டியலை நீக்க விரும்புகிறீர்களா?';
+  String get delete_playlist_confirmation =>
+      'இந்த பாடல் பட்டியலை நீக்க விரும்புகிறீர்களா?';
 
   @override
   String get local_tracks => 'உள்ளூர் பாடல்கள்';
@@ -988,16 +981,20 @@ class AppLocalizationsTa extends AppLocalizations {
   String get get_started => 'தொடங்குவோம்';
 
   @override
-  String get youtube_source_description => 'பரிந்துரைக்கப்படுகிறது மற்றும் சிறப்பாக செயல்படுகிறது.';
+  String get youtube_source_description =>
+      'பரிந்துரைக்கப்படுகிறது மற்றும் சிறப்பாக செயல்படுகிறது.';
 
   @override
-  String get piped_source_description => 'சுதந்திரமாக உணர்கிறீர்களா? YouTube போலவே ஆனால் மிகவும் சுதந்திரமானது.';
+  String get piped_source_description =>
+      'சுதந்திரமாக உணர்கிறீர்களா? YouTube போலவே ஆனால் மிகவும் சுதந்திரமானது.';
 
   @override
-  String get jiosaavn_source_description => 'தெற்காசியப் பிராந்தியத்திற்கு சிறந்தது.';
+  String get jiosaavn_source_description =>
+      'தெற்காசியப் பிராந்தியத்திற்கு சிறந்தது.';
 
   @override
-  String get invidious_source_description => 'Piped ஐப் போன்றது ஆனால் அதிக கிடைக்கும் தன்மையுடன்.';
+  String get invidious_source_description =>
+      'Piped ஐப் போன்றது ஆனால் அதிக கிடைக்கும் தன்மையுடன்.';
 
   @override
   String highest_quality(Object quality) {
@@ -1008,13 +1005,15 @@ class AppLocalizationsTa extends AppLocalizations {
   String get select_audio_source => 'ஒலி மூலத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
-  String get endless_playback_description => 'வரிசையின் இறுதியில் புதிய பாடல்களை\nதானாகவே சேர்க்கவும்';
+  String get endless_playback_description =>
+      'வரிசையின் இறுதியில் புதிய பாடல்களை\nதானாகவே சேர்க்கவும்';
 
   @override
   String get choose_your_region => 'உங்கள் பிராந்தியத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
-  String get choose_your_region_description => 'இது உங்கள் இருப்பிடத்திற்கான சரியான உள்ளடக்கத்தை\nSpotube காட்ட உதவும்.';
+  String get choose_your_region_description =>
+      'இது உங்கள் இருப்பிடத்திற்கான சரியான உள்ளடக்கத்தை\nSpotube காட்ட உதவும்.';
 
   @override
   String get choose_your_language => 'உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்';
@@ -1023,13 +1022,15 @@ class AppLocalizationsTa extends AppLocalizations {
   String get help_project_grow => 'இந்த திட்டம் வளர உதவுங்கள்';
 
   @override
-  String get help_project_grow_description => 'Spotube ஒரு திறந்த மூல திட்டம். திட்டத்திற்கு பங்களிப்பு செய்வதன் மூலம், பிழைகளைப் புகாரளிப்பதன் மூலம் அல்லது புதிய அம்சங்களைப் பரிந்துரைப்பதன் மூலம் இந்தத் திட்டம் வளர உதவலாம்.';
+  String get help_project_grow_description =>
+      'Spotube ஒரு திறந்த மூல திட்டம். திட்டத்திற்கு பங்களிப்பு செய்வதன் மூலம், பிழைகளைப் புகாரளிப்பதன் மூலம் அல்லது புதிய அம்சங்களைப் பரிந்துரைப்பதன் மூலம் இந்தத் திட்டம் வளர உதவலாம்.';
 
   @override
   String get contribute_on_github => 'GitHub இல் பங்களியுங்கள்';
 
   @override
-  String get donate_on_open_collective => 'Open Collective இல் நன்கொடை அளியுங்கள்';
+  String get donate_on_open_collective =>
+      'Open Collective இல் நன்கொடை அளியுங்கள்';
 
   @override
   String get browse_anonymously => 'அநாமதேயமாக உலாவுக';
@@ -1038,7 +1039,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get enable_connect => 'இணைப்பை இயக்கு';
 
   @override
-  String get enable_connect_description => 'மற்ற சாதனங்களிலிருந்து Spotube ஐக் கட்டுப்படுத்தவும்';
+  String get enable_connect_description =>
+      'மற்ற சாதனங்களிலிருந்து Spotube ஐக் கட்டுப்படுத்தவும்';
 
   @override
   String get devices => 'சாதனங்கள்';
@@ -1117,7 +1119,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get choose_the_device => 'சாதனத்தைத் தேர்ந்தெடுக்கவும்:';
 
   @override
-  String get multiple_device_connected => 'பல சாதனங்கள் இணைக்கப்பட்டுள்ளன.\nஇந்த செயல் நடைபெற வேண்டிய சாதனத்தைத் தேர்ந்தெடுக்கவும்';
+  String get multiple_device_connected =>
+      'பல சாதனங்கள் இணைக்கப்பட்டுள்ளன.\nஇந்த செயல் நடைபெற வேண்டிய சாதனத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
   String get nothing_found => 'எதுவும் கிடைக்கவில்லை';
@@ -1212,7 +1215,8 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get spotify_hipotetical_calculation => '*இது Spotify இன் ஒவ்வொரு ஸ்ட்ரீமிற்கும்\n\$0.003 முதல் \$0.005 வரை அளவீடு அடிப்படையில் கணக்கிடப்படுகிறது. இது ஒரு கற்பனை\nகணக்கீடு ஆகும், பயனர் எந்த அளவிற்கு கலைஞர்களுக்கு\nஅதோர் பாடலை Spotify மென்பொருளில் கேட்டால் எவ்வளவு பணம் செலுத்தினார்கள் என்பதைக் கண்டுபிடிக்க.';
+  String get hipotetical_calculation =>
+      '*இது சராசரி ஆன்லைன் இசை ஸ்ட்ரீமிங் தளத்தின் ஒரு ஸ்ட்ரீமிற்கான \$0.003 முதல் \$0.005 வரையிலான கட்டணத்தின் அடிப்படையில் கணக்கிடப்படுகிறது. இது ஒரு கற்பனையான கணக்கீடு ஆகும், இது பயனர்கள் வெவ்வேறு இசை ஸ்ட்ரீமிங் தளங்களில் தங்கள் பாடல்களைக் கேட்டால் கலைஞர்களுக்கு எவ்வளவு பணம் செலுத்தியிருப்பார்கள் என்பது குறித்த நுண்ணறிவை வழங்குகிறது.';
 
   @override
   String count_mins(Object minutes) {
@@ -1261,7 +1265,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get webview_not_found => 'வெப்வியூ கிடைக்கவில்லை';
 
   @override
-  String get webview_not_found_description => 'உங்கள் சாதனத்தில் எந்தவொரு வெப்வியூ இயக்கத்தை நிறுவவில்லை.\nஇது நிறுவப்பட்டிருந்தால், சுற்றுச்சூழல் பாதையில் PATH உள்ளது என்பதை உறுதிபடுத்தவும்\n\nநிறுவித்த பிறகு, செயலியை மறுதொடக்கம் செய்யவும்';
+  String get webview_not_found_description =>
+      'உங்கள் சாதனத்தில் எந்தவொரு வெப்வியூ இயக்கத்தை நிறுவவில்லை.\nஇது நிறுவப்பட்டிருந்தால், சுற்றுச்சூழல் பாதையில் PATH உள்ளது என்பதை உறுதிபடுத்தவும்\n\nநிறுவித்த பிறகு, செயலியை மறுதொடக்கம் செய்யவும்';
 
   @override
   String get unsupported_platform => 'அதிர்ஷ்டகாத உருப்படியை ஆதரிக்கவில்லை';
@@ -1293,7 +1298,8 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get export_cache_confirmation => 'இந்த கோப்புகளை ஏற்றுமதி செய்ய விரும்புகிறீர்களா?';
+  String get export_cache_confirmation =>
+      'இந்த கோப்புகளை ஏற்றுமதி செய்ய விரும்புகிறீர்களா?';
 
   @override
   String exported_n_out_of_m_files(Object files, Object filesExported) {
@@ -1322,7 +1328,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get view_all => 'அனைத்தையும் காண்க';
 
   @override
-  String get no_tracks_added_yet => 'உங்கள் பாடல்களை இன்னும் சேர்க்கவில்லை என்றால் தெரியாதே';
+  String get no_tracks_added_yet =>
+      'உங்கள் பாடல்களை இன்னும் சேர்க்கவில்லை என்றால் தெரியாதே';
 
   @override
   String get no_tracks => 'இங்கு பாடல்கள் எதுவும் இல்லை';
@@ -1334,7 +1341,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get not_following_artists => 'நீங்கள் எந்த கலைஞரையும் பின்தொடரவில்லை';
 
   @override
-  String get no_favorite_albums_yet => 'நீங்கள் இன்னும் எந்த ஆல்பங்களையும் பிடித்தவையாகச் சேர்க்கவில்லை';
+  String get no_favorite_albums_yet =>
+      'நீங்கள் இன்னும் எந்த ஆல்பங்களையும் பிடித்தவையாகச் சேர்க்கவில்லை';
 
   @override
   String get no_logs_found => 'பதிவுகள் எதுவும் கிடைக்கவில்லை';
@@ -1358,7 +1366,8 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get youtube_engine_unix_issue_message => 'macOS/Linux/unix போல் OS இல், .zshrc/.bashrc/.bash_profile போன்றவை அமைப்பில் பாதையை PATH அமைப்பது இயலாது.\nநீங்கள்.shell configuration file இல் பாதையை அமைக்க வேண்டும்';
+  String get youtube_engine_unix_issue_message =>
+      'macOS/Linux/unix போல் OS இல், .zshrc/.bashrc/.bash_profile போன்றவை அமைப்பில் பாதையை PATH அமைப்பது இயலாது.\nநீங்கள்.shell configuration file இல் பாதையை அமைக்க வேண்டும்';
 
   @override
   String get download => 'பதிவிறக்கு';
@@ -1376,7 +1385,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get edit_port => 'போர்டு திருத்தவும்';
 
   @override
-  String get port_helper_msg => 'இயல்புநிலை -1 ஆகும், இது சீரற்ற எண்ணை குறிக்கிறது. நீங்கள் தீயணைப்பு அமைக்கப்பட்டிருந்தால், இதை அமைப்பது பரிந்துரைக்கப்படுகிறது.';
+  String get port_helper_msg =>
+      'இயல்புநிலை -1 ஆகும், இது சீரற்ற எண்ணை குறிக்கிறது. நீங்கள் தீயணைப்பு அமைக்கப்பட்டிருந்தால், இதை அமைப்பது பரிந்துரைக்கப்படுகிறது.';
 
   @override
   String connect_request(Object client) {
@@ -1384,5 +1394,186 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
-  String get connection_request_denied => 'இணைப்பு மறுக்கப்பட்டது. பயனர் அணுகலை மறுத்தார்.';
+  String get connection_request_denied =>
+      'இணைப்பு மறுக்கப்பட்டது. பயனர் அணுகலை மறுத்தார்.';
+
+  @override
+  String get an_error_occurred => 'ஒரு பிழை ஏற்பட்டது';
+
+  @override
+  String get copy_to_clipboard => 'கிளிப்போர்டுக்கு நகலெடுக்கவும்';
+
+  @override
+  String get view_logs => 'பதிவுகளைப் பார்க்கவும்';
+
+  @override
+  String get retry => 'மீண்டும் முயற்சிக்கவும்';
+
+  @override
+  String get no_default_metadata_provider_selected =>
+      'நீங்கள் எந்த இயல்புநிலை மெட்டாடேட்டா வழங்குநரையும் அமைக்கவில்லை';
+
+  @override
+  String get manage_metadata_providers =>
+      'மெட்டாடேட்டா வழங்குநர்களை நிர்வகிக்கவும்';
+
+  @override
+  String get open_link_in_browser => 'இணைப்பை உலாவியில் திறக்கவா?';
+
+  @override
+  String get do_you_want_to_open_the_following_link =>
+      'பின்வரும் இணைப்பை நீங்கள் திறக்க விரும்புகிறீர்களா';
+
+  @override
+  String get unsafe_url_warning =>
+      'நம்பத்தகாத மூலங்களிலிருந்து இணைப்புகளைத் திறப்பது பாதுகாப்பற்றதாக இருக்கலாம். எச்சரிக்கையாக இருங்கள்!\nநீங்கள் இணைப்பை உங்கள் கிளிப்போர்டுக்கு நகலெடுக்கலாம்.';
+
+  @override
+  String get copy_link => 'இணைப்பை நகலெடுக்கவும்';
+
+  @override
+  String get building_your_timeline =>
+      'உங்கள் கேட்டலின் அடிப்படையில் உங்கள் காலவரிசையை உருவாக்குகிறது...';
+
+  @override
+  String get official => 'அதிகாரபூர்வமானது';
+
+  @override
+  String author_name(Object author) {
+    return 'ஆசிரியர்: $author';
+  }
+
+  @override
+  String get third_party => 'மூன்றாம் தரப்பு';
+
+  @override
+  String get plugin_requires_authentication =>
+      'பிளகின் அங்கீகாரத்தைக் கோருகிறது';
+
+  @override
+  String get update_available => 'புதுப்பிப்பு உள்ளது';
+
+  @override
+  String get supports_scrobbling => 'ஸ்க்ரோப்ளிங்கை ஆதரிக்கிறது';
+
+  @override
+  String get plugin_scrobbling_info =>
+      'இந்த பிளகின் உங்கள் கேட்பதின் வரலாற்றை உருவாக்க உங்கள் இசையை ஸ்க்ரோப்ள் செய்கிறது.';
+
+  @override
+  String get default_metadata_source => 'இயல்புநிலை மெட்டாடேட்டா மூலம்';
+
+  @override
+  String get set_default_metadata_source =>
+      'இயல்புநிலை மெட்டாடேட்டா மூலத்தை அமை';
+
+  @override
+  String get default_audio_source => 'இயல்புநிலை ஆடியோ மூலம்';
+
+  @override
+  String get set_default_audio_source => 'இயல்புநிலை ஆடியோ மூலத்தை அமை';
+
+  @override
+  String get set_default => 'இயல்புநிலையாக அமைக்கவும்';
+
+  @override
+  String get support => 'ஆதரவு';
+
+  @override
+  String get support_plugin_development => 'பிளகின் வளர்ச்சிக்கு ஆதரவு';
+
+  @override
+  String can_access_name_api(Object name) {
+    return '- **$name** API ஐ அணுக முடியும்';
+  }
+
+  @override
+  String get do_you_want_to_install_this_plugin =>
+      'இந்த பிளகினை நீங்கள் நிறுவ விரும்புகிறீர்களா?';
+
+  @override
+  String get third_party_plugin_warning =>
+      'இந்த பிளகின் மூன்றாம் தரப்பு களஞ்சியத்திலிருந்து வருகிறது. நிறுவும் முன் மூலத்தை நீங்கள் நம்புகிறீர்கள் என்பதை உறுதிப்படுத்தவும்.';
+
+  @override
+  String get author => 'ஆசிரியர்';
+
+  @override
+  String get this_plugin_can_do_following =>
+      'இந்த பிளகின் பின்வருவனவற்றைச் செய்ய முடியும்';
+
+  @override
+  String get install => 'நிறுவவும்';
+
+  @override
+  String get install_a_metadata_provider => 'மெட்டாடேட்டா வழங்குநரை நிறுவவும்';
+
+  @override
+  String get no_tracks_playing => 'தற்போது எந்த பாடலும் இயங்கவில்லை';
+
+  @override
+  String get synced_lyrics_not_available =>
+      'இந்த பாடலுக்கு ஒத்திசைக்கப்பட்ட வரிகள் கிடைக்கவில்லை. தயவுசெய்து';
+
+  @override
+  String get plain_lyrics => 'சாதாரண வரிகள்';
+
+  @override
+  String get tab_instead => 'தாவலை அதற்கு பதிலாக பயன்படுத்தவும்.';
+
+  @override
+  String get disclaimer => 'துறப்பு';
+
+  @override
+  String get third_party_plugin_dmca_notice =>
+      'ஸ்பாட்யூப் குழு எந்த \"மூன்றாம் தரப்பு\" பிளகின்களுக்கும் எந்தப் பொறுப்பையும் (சட்டரீதியான உட்பட) ஏற்காது.\nதயவுசெய்து உங்கள் சொந்த ஆபத்தில் அவற்றைப் பயன்படுத்தவும். ஏதேனும் பிழைகள்/சிக்கல்களுக்கு, பிளகின் களஞ்சியத்தில் அவற்றைப் புகாரளிக்கவும்.\n\nஏதேனும் ஒரு \"மூன்றாம் தரப்பு\" பிளகின் ஒரு சேவை/சட்ட நிறுவனத்தின் ToS/DMCA ஐ மீறினால், தயவுசெய்து \"மூன்றாம் தரப்பு\" பிளகின் ஆசிரியரையோ அல்லது ஹோஸ்டிங் தளத்தையோ, எ.கா. GitHub/Codeberg, நடவடிக்கை எடுக்கக் கோரவும். மேலே பட்டியலிடப்பட்ட (\"மூன்றாம் தரப்பு\" என பெயரிடப்பட்ட) அனைத்து பொதுவான/சமூகத்தால் பராமரிக்கப்படும் பிளகின்கள். நாங்கள் அவற்றை க்யூரேட் செய்யவில்லை, எனவே அவற்றின் மீது எந்த நடவடிக்கையும் எடுக்க முடியாது.\n\n';
+
+  @override
+  String get input_does_not_match_format =>
+      'உள்ளீடு தேவையான வடிவத்துடன் பொருந்தவில்லை';
+
+  @override
+  String get plugins => 'செருகுநிரல்கள்';
+
+  @override
+  String get paste_plugin_download_url =>
+      'பதிவிறக்க url அல்லது GitHub/Codeberg repo url அல்லது .smplug கோப்பிற்கான நேரடி இணைப்பை ஒட்டவும்';
+
+  @override
+  String get download_and_install_plugin_from_url =>
+      'url இலிருந்து பிளகினைப் பதிவிறக்கி நிறுவவும்';
+
+  @override
+  String failed_to_add_plugin_error(Object error) {
+    return 'பிளகினைச் சேர்க்கத் தவறிவிட்டது: $error';
+  }
+
+  @override
+  String get upload_plugin_from_file => 'கோப்பிலிருந்து பிளகினைப் பதிவேற்றவும்';
+
+  @override
+  String get installed => 'நிறுவப்பட்டது';
+
+  @override
+  String get available_plugins => 'கிடைக்கக்கூடிய பிளகின்கள்';
+
+  @override
+  String get configure_plugins =>
+      'உங்கள் சொந்த மெட்டாடேட்டா வழங்குநர் மற்றும் ஆடியோ மூல செருகுநிரல்களை அமைக்கவும்';
+
+  @override
+  String get audio_scrobblers => 'ஆடியோ ஸ்க்ரோப்ளர்கள்';
+
+  @override
+  String get scrobbling => 'ஸ்க்ரோப்ளிங்';
+
+  @override
+  String get source => 'மூலம்: ';
+
+  @override
+  String get uncompressed => 'அழுத்தப்படாத';
+
+  @override
+  String get dab_music_source_description =>
+      'ஆடியோஃபைல்களுக்காக. உயர்தர/லாஸ்லெஸ் ஆடியோ ஸ்ட்ரீம்களை வழங்குகிறது. ISRC அடிப்படையில் துல்லியமான பாடல் பொருத்தம்.';
 }

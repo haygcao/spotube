@@ -27,7 +27,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settings => 'Ayarlar';
 
   @override
-  String get genre_categories_filter => 'Kategorileri veya türleri filtreleyin...';
+  String get genre_categories_filter =>
+      'Kategorileri veya türleri filtreleyin...';
 
   @override
   String get genre => 'Tür';
@@ -356,7 +357,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get clear_all => 'Tümünü temizle';
 
   @override
-  String get show_hide_ui_on_hover => 'Fareyle üzerine gelindiğinde kullanıcı arayüzünü göster/gizle';
+  String get show_hide_ui_on_hover =>
+      'Fareyle üzerine gelindiğinde kullanıcı arayüzünü göster/gizle';
 
   @override
   String get always_on_top => 'Her zaman üstte';
@@ -378,12 +380,6 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get account => 'Hesap';
-
-  @override
-  String get login_with_spotify => 'Spotify hesabı ile giriş yap';
-
-  @override
-  String get connect_with_spotify => 'Spotify ile bağlan';
 
   @override
   String get logout => 'Çıkış yap';
@@ -413,7 +409,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get layout_mode => 'Düzen modu';
 
   @override
-  String get override_layout_settings => 'Duyarlı düzen modu ayarlarını geçersiz kıl';
+  String get override_layout_settings =>
+      'Duyarlı düzen modu ayarlarını geçersiz kıl';
 
   @override
   String get adaptive => 'Uyarlanabilir';
@@ -443,7 +440,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get sync_album_color => 'Albüm rengini senkronize et';
 
   @override
-  String get sync_album_color_description => 'Vurgu rengi olarak albüm resminin baskın rengini kullanır';
+  String get sync_album_color_description =>
+      'Vurgu rengi olarak albüm resminin baskın rengini kullanır';
 
   @override
   String get playback => 'Oynatma';
@@ -461,16 +459,19 @@ class AppLocalizationsTr extends AppLocalizations {
   String get pre_download_play => 'Önceden indir ve oynat';
 
   @override
-  String get pre_download_play_description => 'Ses akışı yerine baytları indir ve oynat (Daha yüksek bant genişliğine sahip kullanıcılar için önerilir)';
+  String get pre_download_play_description =>
+      'Ses akışı yerine baytları indir ve oynat (Daha yüksek bant genişliğine sahip kullanıcılar için önerilir)';
 
   @override
   String get skip_non_music => 'Müzik olmayan bölümleri atlat (SponsorBlock)';
 
   @override
-  String get blacklist_description => 'Kara listeye alınan parçalar ve sanatçılar';
+  String get blacklist_description =>
+      'Kara listeye alınan parçalar ve sanatçılar';
 
   @override
-  String get wait_for_download_to_finish => 'Lütfen mevcut indirme işleminin tamamlanmasını bekleyin';
+  String get wait_for_download_to_finish =>
+      'Lütfen mevcut indirme işleminin tamamlanmasını bekleyin';
 
   @override
   String get desktop => 'Masaüstü';
@@ -506,7 +507,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get please_sponsor => 'Sponsor Ol/Bağış Yap';
 
   @override
-  String get spotube_description => 'Spotube, hafif, platformlar arası uyumlu ve herkes için ücretsiz bir Spotify istemcisidir.';
+  String get spotube_description =>
+      'Spotube, hafif, platformlar arası uyumlu ve herkes için ücretsiz bir Spotify istemcisidir.';
 
   @override
   String get version => 'Sürüm';
@@ -538,21 +540,14 @@ class AppLocalizationsTr extends AppLocalizations {
   String get license => 'Lisans';
 
   @override
-  String get add_spotify_credentials => 'Başlamak için spotify kimlik bilgilerinizi ekleyin';
-
-  @override
-  String get credentials_will_not_be_shared_disclaimer => 'Endişelenmeyin, kimlik bilgilerinizden hiçbiri toplanmayacak veya kimseyle paylaşılmayacak';
+  String get credentials_will_not_be_shared_disclaimer =>
+      'Endişelenmeyin, kimlik bilgilerinizden hiçbiri toplanmayacak veya kimseyle paylaşılmayacak';
 
   @override
   String get know_how_to_login => 'Bunu nasıl yapacağınızı bilmiyor musunuz?';
 
   @override
   String get follow_step_by_step_guide => 'Adım adım kılavuzu takip edin';
-
-  @override
-  String spotify_cookie(Object name) {
-    return 'Spotify $name çerezi';
-  }
 
   @override
   String cookie_name_cookie(Object name) {
@@ -584,52 +579,29 @@ class AppLocalizationsTr extends AppLocalizations {
   String get first_go_to => 'İlk olarak şuraya gidin:';
 
   @override
-  String get login_if_not_logged_in => 've oturum açmadıysanız Oturum açın/Kaydolun';
-
-  @override
-  String get step_2 => '2. Adım';
-
-  @override
-  String get step_2_steps => '1. Oturum açtıktan sonra, tarayıcı geliştirme araçlarını açmak için F12\'ye veya fareye sağ tıklayın > İncele\'ye basın.\n2. Daha sonra \"Uygulama\" sekmesine (Chrome, Edge, Brave vb..) veya \"Depolama\" sekmesine (Firefox, Palemoon vb..) gidin\n3. \"Çerezler\" bölümüne, ardından \"https://accounts.spotify.com\" alt bölümüne gidin';
-
-  @override
-  String get step_3 => '3. Adım';
-
-  @override
-  String get step_3_steps => '\"sp_dc\" Çerezinin değerini kopyalayın';
-
-  @override
-  String get success_emoji => 'Başarılı🥳';
-
-  @override
-  String get success_message => 'Artık Spotify hesabınızla başarıyla giriş yaptınız. Tebrik ederim!';
-
-  @override
-  String get step_4 => '4. Adım';
-
-  @override
-  String get step_4_steps => 'Kopyalanan \"sp_dc\" değerini yapıştırın';
-
-  @override
   String get something_went_wrong => 'Bir hata oluştu';
 
   @override
   String get piped_instance => 'Piped sunucu örneği';
 
   @override
-  String get piped_description => 'Parça eşleştirme için kullanılacak Piped sunucu örneği';
+  String get piped_description =>
+      'Parça eşleştirme için kullanılacak Piped sunucu örneği';
 
   @override
-  String get piped_warning => 'Bazıları iyi çalışmayabilir. Yani riski size ait olmak üzere kullanın';
+  String get piped_warning =>
+      'Bazıları iyi çalışmayabilir. Yani riski size ait olmak üzere kullanın';
 
   @override
   String get invidious_instance => 'Invidious Sunucu Örneği';
 
   @override
-  String get invidious_description => 'Parça eşleştirmesi için kullanılacak Invidious sunucu örneği';
+  String get invidious_description =>
+      'Parça eşleştirmesi için kullanılacak Invidious sunucu örneği';
 
   @override
-  String get invidious_warning => 'Bazıları iyi çalışmayabilir. Kendi riskinizde kullanın';
+  String get invidious_warning =>
+      'Bazıları iyi çalışmayabilir. Kendi riskinizde kullanın';
 
   @override
   String get generate => 'Oluştur';
@@ -646,7 +618,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get skip_download_tracks => 'İndirilen tüm parçaları indirmeyi atla';
 
   @override
-  String get do_you_want_to_replace => 'Mevcut parçayı değiştirmek istiyor musunuz?';
+  String get do_you_want_to_replace =>
+      'Mevcut parçayı değiştirmek istiyor musunuz?';
 
   @override
   String get replace => 'Değiştir';
@@ -752,22 +725,28 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get download_warning => 'Tüm şarkıları toplu olarak indiriyorsanız, açıkça müzik korsanlığı yapıyorsunuz ve müzik dünyasının yaratıcı topluluğuna zarar veriyorsunuz demektir. Umuyorum bunun farkındasınızdır. Her zaman, sanatçıların emeğine saygı göstermeyi ve desteklemeyi deneyin.';
+  String get download_warning =>
+      'Tüm şarkıları toplu olarak indiriyorsanız, açıkça müzik korsanlığı yapıyorsunuz ve müzik dünyasının yaratıcı topluluğuna zarar veriyorsunuz demektir. Umuyorum bunun farkındasınızdır. Her zaman, sanatçıların emeğine saygı göstermeyi ve desteklemeyi deneyin.';
 
   @override
-  String get download_ip_ban_warning => 'Ayrıca, normalden fazla indirme istekleri nedeniyle YouTube\'da IP\'niz engellenebilir. IP engeli, en az 2-3 ay boyunca YouTube\'u (hatta oturum açmış olsanız bile) o IP cihazından kullanamayacağınız anlamına gelir. Ve eğer böyle bir durum yaşanırsa, Spotube bundan hiçbir sorumluluk kabul etmez.';
+  String get download_ip_ban_warning =>
+      'Ayrıca, normalden fazla indirme istekleri nedeniyle YouTube\'da IP\'niz engellenebilir. IP engeli, en az 2-3 ay boyunca YouTube\'u (hatta oturum açmış olsanız bile) o IP cihazından kullanamayacağınız anlamına gelir. Ve eğer böyle bir durum yaşanırsa, Spotube bundan hiçbir sorumluluk kabul etmez.';
 
   @override
-  String get by_clicking_accept_terms => '\"Kabul et\" e tıklayarak aşağıdaki şartları kabul etmiş olursunuz:';
+  String get by_clicking_accept_terms =>
+      '\"Kabul et\" e tıklayarak aşağıdaki şartları kabul etmiş olursunuz:';
 
   @override
-  String get download_agreement_1 => 'Müzik korsanlığı yaptığımı biliyorum. Ben fakir biriyim.';
+  String get download_agreement_1 =>
+      'Müzik korsanlığı yaptığımı biliyorum. Ben fakir biriyim.';
 
   @override
-  String get download_agreement_2 => 'Sanatçıyı elimden geldiğince destekleyeceğim ve bunu sadece sanatını satın alacak param olmadığı için yapıyorum';
+  String get download_agreement_2 =>
+      'Sanatçıyı elimden geldiğince destekleyeceğim ve bunu sadece sanatını satın alacak param olmadığı için yapıyorum';
 
   @override
-  String get download_agreement_3 => 'YouTube\'da IP\'min engellenebileceğinin tamamen farkındayım ve mevcut eylemlerimden kaynaklanan herhangi bir kaza için Spotube\'u veya sahiplerini/katkıda bulunanları sorumlu tutmuyorum.';
+  String get download_agreement_3 =>
+      'YouTube\'da IP\'min engellenebileceğinin tamamen farkındayım ve mevcut eylemlerimden kaynaklanan herhangi bir kaza için Spotube\'u veya sahiplerini/katkıda bulunanları sorumlu tutmuyorum.';
 
   @override
   String get decline => 'Reddet';
@@ -848,7 +827,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get failed_to_encrypt => 'Şifreleme başarısız oldu';
 
   @override
-  String get encryption_failed_warning => 'Spotube, verilerinizi güvenli bir şekilde depolamak için şifreleme kullanır. Ancak bunu başaramadı. Bu nedenle, güvensiz depolamaya geri dönecektir\nLinux kullanıyorsanız, lütfen gnome-keyring, kde-wallet, keepassxc vb. herhangi bir gizli servisin yüklü olduğundan emin olun.';
+  String get encryption_failed_warning =>
+      'Spotube, verilerinizi güvenli bir şekilde depolamak için şifreleme kullanır. Ancak bunu başaramadı. Bu nedenle, güvensiz depolamaya geri dönecektir\nLinux kullanıyorsanız, lütfen gnome-keyring, kde-wallet, keepassxc vb. herhangi bir gizli servisin yüklü olduğundan emin olun.';
 
   @override
   String get querying_info => 'Bilgi sorgulanıyor...';
@@ -895,10 +875,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get restore_defaults => 'Varsayılanları geri yükle';
 
   @override
-  String get download_music_codec => 'Müzik codec bileşenini indir';
+  String get download_music_format => 'Müzik indirme formatı';
 
   @override
-  String get streaming_music_codec => 'Müzik codec\'i akışı';
+  String get streaming_music_format => 'Müzik akış formatı';
+
+  @override
+  String get download_music_quality => 'İndirilen müzik kalitesi';
+
+  @override
+  String get streaming_music_quality => 'Yayınlanan müzik kalitesi';
 
   @override
   String get login_with_lastfm => 'Last.fm ile giriş yap';
@@ -955,7 +941,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get how_to_start_radio => 'Radyoyu nasıl başlatmak istersiniz?';
 
   @override
-  String get replace_queue_question => 'Mevcut kuyruğu değiştirmek mi yoksa eklemek mi istersiniz?';
+  String get replace_queue_question =>
+      'Mevcut kuyruğu değiştirmek mi yoksa eklemek mi istersiniz?';
 
   @override
   String get endless_playback => 'Sonsuz olarak oynat';
@@ -964,7 +951,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get delete_playlist => 'Oynatma listesini sil';
 
   @override
-  String get delete_playlist_confirmation => 'Bu oynatma listesini silmek istediğinizden emin misiniz?';
+  String get delete_playlist_confirmation =>
+      'Bu oynatma listesini silmek istediğinizden emin misiniz?';
 
   @override
   String get local_tracks => 'Yerel parçalar';
@@ -988,16 +976,19 @@ class AppLocalizationsTr extends AppLocalizations {
   String get get_started => 'Haydi başlayalım';
 
   @override
-  String get youtube_source_description => 'Tavsiye edilir ve en iyi şekilde çalışır.';
+  String get youtube_source_description =>
+      'Tavsiye edilir ve en iyi şekilde çalışır.';
 
   @override
-  String get piped_source_description => 'Özgür hissediyor musunuz? YouTube ile aynı, ama çok daha özgür.';
+  String get piped_source_description =>
+      'Özgür hissediyor musunuz? YouTube ile aynı, ama çok daha özgür.';
 
   @override
   String get jiosaavn_source_description => 'Güney Asya bölgesi için en iyisi.';
 
   @override
-  String get invidious_source_description => 'Piped\'a benzer, ancak daha yüksek kullanılabilirliğe sahip.';
+  String get invidious_source_description =>
+      'Piped\'a benzer, ancak daha yüksek kullanılabilirliğe sahip.';
 
   @override
   String highest_quality(Object quality) {
@@ -1008,13 +999,15 @@ class AppLocalizationsTr extends AppLocalizations {
   String get select_audio_source => 'Ses kaynağını seçin';
 
   @override
-  String get endless_playback_description => 'Yeni şarkıları otomatik olarak\nkuyruğun sonuna ekle';
+  String get endless_playback_description =>
+      'Yeni şarkıları otomatik olarak\nkuyruğun sonuna ekle';
 
   @override
   String get choose_your_region => 'Bölgenizi seçin';
 
   @override
-  String get choose_your_region_description => 'Bu, Spotube\'un konumunuza uygun içerikleri göstermesine yardımcı olacaktır.';
+  String get choose_your_region_description =>
+      'Bu, Spotube\'un konumunuza uygun içerikleri göstermesine yardımcı olacaktır.';
 
   @override
   String get choose_your_language => 'Dilinizi seçin';
@@ -1023,7 +1016,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get help_project_grow => 'Bu projenin büyümesine yardımcı olun';
 
   @override
-  String get help_project_grow_description => 'Spotube açık kaynaklı bir projedir. Projeye katkıda bulunarak, hataları bildirerek veya yeni özellikler önererek bu projenin büyümesine yardımcı olabilirsiniz.';
+  String get help_project_grow_description =>
+      'Spotube açık kaynaklı bir projedir. Projeye katkıda bulunarak, hataları bildirerek veya yeni özellikler önererek bu projenin büyümesine yardımcı olabilirsiniz.';
 
   @override
   String get contribute_on_github => 'GitHub\'da katkıda bulun';
@@ -1038,7 +1032,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get enable_connect => 'Bağlanmayı etkinleştir';
 
   @override
-  String get enable_connect_description => 'Spotube\'u diğer cihazlardan kontrol edin';
+  String get enable_connect_description =>
+      'Spotube\'u diğer cihazlardan kontrol edin';
 
   @override
   String get devices => 'Cihazlar';
@@ -1117,7 +1112,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get choose_the_device => 'Cihazı seçin:';
 
   @override
-  String get multiple_device_connected => 'Birden fazla cihaz bağlı.\nBu işlemi gerçekleştirmek istediğiniz cihazı seçin';
+  String get multiple_device_connected =>
+      'Birden fazla cihaz bağlı.\nBu işlemi gerçekleştirmek istediğiniz cihazı seçin';
 
   @override
   String get nothing_found => 'Hiçbir şey bulunamadı';
@@ -1190,7 +1186,8 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get streaming_fees_hypothetical => '*Spotify\'ın akış başına ödeme miktarına\n\$0.003 ile \$0.005 arasında hesaplanmıştır. Bu, kullanıcıya\nSpotify\'da şarkılarını dinlerse sanatçılara ne kadar ödeme\nyapmış olabileceğini göstermek için hipotetik bir hesaplamadır.';
+  String get streaming_fees_hypothetical =>
+      '*Spotify\'ın akış başına ödeme miktarına\n\$0.003 ile \$0.005 arasında hesaplanmıştır. Bu, kullanıcıya\nSpotify\'da şarkılarını dinlerse sanatçılara ne kadar ödeme\nyapmış olabileceğini göstermek için hipotetik bir hesaplamadır.';
 
   @override
   String get minutes_listened => 'Dinlenilen Dakikalar';
@@ -1212,7 +1209,8 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get spotify_hipotetical_calculation => '*Bu, Spotify\'ın her yayın başına ödemenin\n\$0.003 ile \$0.005 arasında olduğu varsayımıyla hesaplanmıştır. Bu\nhipotetik bir hesaplamadır, kullanıcıya şarkılarını Spotify\'da dinlediklerinde\nsanatçılara ne kadar ödeme yapacaklarını gösterir.';
+  String get hipotetical_calculation =>
+      '*Bu, çevrimiçi müzik akışı platformlarının ortalama akış başına \$0,003 ile \$0,005 arasındaki ödemesine göre hesaplanmıştır. Bu, kullanıcının farklı müzik akışı platformlarında şarkılarını dinleselerdi sanatçılara ne kadar ödeme yapacaklarına dair fikir vermek için yapılan varsayımsal bir hesaplamadır.';
 
   @override
   String count_mins(Object minutes) {
@@ -1261,7 +1259,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get webview_not_found => 'Webview bulunamadı';
 
   @override
-  String get webview_not_found_description => 'Cihazınızda herhangi bir Webview çalışma zamanı yüklü değil.\nEğer kuruluysa, ortam YOLUNDA olduğundan emin olun\n\nKurulumdan sonra uygulamayı yeniden başlatın';
+  String get webview_not_found_description =>
+      'Cihazınızda herhangi bir Webview çalışma zamanı yüklü değil.\nEğer kuruluysa, ortam YOLUNDA olduğundan emin olun\n\nKurulumdan sonra uygulamayı yeniden başlatın';
 
   @override
   String get unsupported_platform => 'Desteklenmeyen platform';
@@ -1282,7 +1281,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get clear_cache => 'Önbelleği temizle';
 
   @override
-  String get clear_cache_confirmation => 'Önbelleği temizlemek istiyor musunuz?';
+  String get clear_cache_confirmation =>
+      'Önbelleği temizlemek istiyor musunuz?';
 
   @override
   String get export_cache_files => 'Önbelleğe Alınmış Dosyaları Dışa Aktar';
@@ -1293,7 +1293,8 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get export_cache_confirmation => 'Bu dosyaları dışa aktarmak istiyor musunuz';
+  String get export_cache_confirmation =>
+      'Bu dosyaları dışa aktarmak istiyor musunuz';
 
   @override
   String exported_n_out_of_m_files(Object files, Object filesExported) {
@@ -1322,19 +1323,22 @@ class AppLocalizationsTr extends AppLocalizations {
   String get view_all => 'Tümünü Gör';
 
   @override
-  String get no_tracks_added_yet => 'Henüz hiçbir şarkı eklemediniz gibi görünüyor';
+  String get no_tracks_added_yet =>
+      'Henüz hiçbir şarkı eklemediniz gibi görünüyor';
 
   @override
   String get no_tracks => 'Burada hiç şarkı yok gibi görünüyor';
 
   @override
-  String get no_tracks_listened_yet => 'Henüz hiçbir şey dinlemediniz gibi görünüyor';
+  String get no_tracks_listened_yet =>
+      'Henüz hiçbir şey dinlemediniz gibi görünüyor';
 
   @override
   String get not_following_artists => 'Hiçbir sanatçıyı takip etmiyorsunuz';
 
   @override
-  String get no_favorite_albums_yet => 'Henüz favorilerinize herhangi bir albüm eklemediniz gibi görünüyor';
+  String get no_favorite_albums_yet =>
+      'Henüz favorilerinize herhangi bir albüm eklemediniz gibi görünüyor';
 
   @override
   String get no_logs_found => 'Log bulunamadı';
@@ -1358,7 +1362,8 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get youtube_engine_unix_issue_message => 'macOS/Linux/Unix benzeri işletim sistemlerinde, .zshrc/.bashrc/.bash_profile gibi dosyalarda yol ayarlamak işe yaramaz.\nYolunuzu kabuk yapılandırma dosyasına ayarlamanız gerekir';
+  String get youtube_engine_unix_issue_message =>
+      'macOS/Linux/Unix benzeri işletim sistemlerinde, .zshrc/.bashrc/.bash_profile gibi dosyalarda yol ayarlamak işe yaramaz.\nYolunuzu kabuk yapılandırma dosyasına ayarlamanız gerekir';
 
   @override
   String get download => 'İndir';
@@ -1376,7 +1381,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get edit_port => 'Portu düzenle';
 
   @override
-  String get port_helper_msg => 'Varsayılan -1\'dir, bu da rastgele bir sayıyı gösterir. Bir güvenlik duvarınız varsa, bunu ayarlamanız önerilir.';
+  String get port_helper_msg =>
+      'Varsayılan -1\'dir, bu da rastgele bir sayıyı gösterir. Bir güvenlik duvarınız varsa, bunu ayarlamanız önerilir.';
 
   @override
   String connect_request(Object client) {
@@ -1384,5 +1390,184 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get connection_request_denied => 'Bağlantı reddedildi. Kullanıcı erişimi reddetti.';
+  String get connection_request_denied =>
+      'Bağlantı reddedildi. Kullanıcı erişimi reddetti.';
+
+  @override
+  String get an_error_occurred => 'Bir hata oluştu';
+
+  @override
+  String get copy_to_clipboard => 'Panoya kopyala';
+
+  @override
+  String get view_logs => 'Günlükleri görüntüle';
+
+  @override
+  String get retry => 'Tekrar dene';
+
+  @override
+  String get no_default_metadata_provider_selected =>
+      'Varsayılan bir meta veri sağlayıcısı ayarlanmadı';
+
+  @override
+  String get manage_metadata_providers => 'Meta veri sağlayıcılarını yönet';
+
+  @override
+  String get open_link_in_browser => 'Bağlantıyı Tarayıcıda Aç?';
+
+  @override
+  String get do_you_want_to_open_the_following_link =>
+      'Aşağıdaki bağlantıyı açmak istiyor musunuz';
+
+  @override
+  String get unsafe_url_warning =>
+      'Güvenilmeyen kaynaklardan bağlantı açmak güvensiz olabilir. Dikkatli olun!\nBağlantıyı panonuza da kopyalayabilirsiniz.';
+
+  @override
+  String get copy_link => 'Bağlantıyı Kopyala';
+
+  @override
+  String get building_your_timeline =>
+      'Dinlemelerinize göre zaman çizelgeniz oluşturuluyor...';
+
+  @override
+  String get official => 'Resmi';
+
+  @override
+  String author_name(Object author) {
+    return 'Yazar: $author';
+  }
+
+  @override
+  String get third_party => 'Üçüncü taraf';
+
+  @override
+  String get plugin_requires_authentication =>
+      'Eklenti kimlik doğrulama gerektirir';
+
+  @override
+  String get update_available => 'Güncelleme mevcut';
+
+  @override
+  String get supports_scrobbling => 'Scrobbling\'i destekler';
+
+  @override
+  String get plugin_scrobbling_info =>
+      'Bu eklenti, dinleme geçmişinizi oluşturmak için müziğinizi scrobble eder.';
+
+  @override
+  String get default_metadata_source => 'Varsayılan meta veri kaynağı';
+
+  @override
+  String get set_default_metadata_source =>
+      'Varsayılan meta veri kaynağını ayarla';
+
+  @override
+  String get default_audio_source => 'Varsayılan ses kaynağı';
+
+  @override
+  String get set_default_audio_source => 'Varsayılan ses kaynağını ayarla';
+
+  @override
+  String get set_default => 'Varsayılan olarak ayarla';
+
+  @override
+  String get support => 'Destek';
+
+  @override
+  String get support_plugin_development => 'Eklenti geliştirmeyi destekle';
+
+  @override
+  String can_access_name_api(Object name) {
+    return '- **$name** API\'ye erişebilir';
+  }
+
+  @override
+  String get do_you_want_to_install_this_plugin =>
+      'Bu eklentiyi yüklemek istiyor musunuz?';
+
+  @override
+  String get third_party_plugin_warning =>
+      'Bu eklenti üçüncü taraf bir depodan gelmektedir. Lütfen yüklemeden önce kaynağa güvendiğinizden emin olun.';
+
+  @override
+  String get author => 'Yazar';
+
+  @override
+  String get this_plugin_can_do_following =>
+      'Bu eklenti aşağıdakileri yapabilir';
+
+  @override
+  String get install => 'Yükle';
+
+  @override
+  String get install_a_metadata_provider => 'Bir Meta Veri Sağlayıcısı Yükle';
+
+  @override
+  String get no_tracks_playing => 'Şu anda çalınan bir Parça yok';
+
+  @override
+  String get synced_lyrics_not_available =>
+      'Bu şarkı için senkronize şarkı sözleri mevcut değil. Lütfen';
+
+  @override
+  String get plain_lyrics => 'Düz Şarkı Sözleri';
+
+  @override
+  String get tab_instead => 'sekmesini kullanın.';
+
+  @override
+  String get disclaimer => 'Sorumluluk Reddi';
+
+  @override
+  String get third_party_plugin_dmca_notice =>
+      'Spotube ekibi, herhangi bir \"Üçüncü taraf\" eklentisi için herhangi bir sorumluluk (yasal olanlar dahil) kabul etmez.\nLütfen bunları kendi riskinizde kullanın. Herhangi bir hata/sorun için lütfen bunları eklenti deposuna bildirin.\n\nHerhangi bir \"Üçüncü taraf\" eklentisi bir hizmetin/yasal varlığın ToS/DMCA\'sını ihlal ediyorsa, lütfen \"Üçüncü taraf\" eklenti yazarından veya barındırma platformundan, örneğin GitHub/Codeberg\'den harekete geçmesini isteyin. Yukarıda listelenen (\"Üçüncü taraf\" olarak etiketlenen) eklentilerin tümü genel/topluluk tarafından sürdürülen eklentilerdir. Biz bunları küratörlüğünü yapmıyoruz, bu yüzden onlar üzerinde herhangi bir işlem yapamayız.\n\n';
+
+  @override
+  String get input_does_not_match_format => 'Girdi, gerekli biçimle eşleşmiyor';
+
+  @override
+  String get plugins => 'Eklentiler';
+
+  @override
+  String get paste_plugin_download_url =>
+      'İndirme url\'sini veya GitHub/Codeberg repo url\'sini veya .smplug dosyasına doğrudan bağlantıyı yapıştırın';
+
+  @override
+  String get download_and_install_plugin_from_url =>
+      'url\'den eklentiyi indir ve yükle';
+
+  @override
+  String failed_to_add_plugin_error(Object error) {
+    return 'Eklenti eklenemedi: $error';
+  }
+
+  @override
+  String get upload_plugin_from_file => 'Dosyadan eklenti yükle';
+
+  @override
+  String get installed => 'Yüklü';
+
+  @override
+  String get available_plugins => 'Mevcut eklentiler';
+
+  @override
+  String get configure_plugins =>
+      'Kendi meta veri sağlayıcı ve ses kaynağı eklentilerinizi yapılandırın';
+
+  @override
+  String get audio_scrobblers => 'Ses Scrobbler\'lar';
+
+  @override
+  String get scrobbling => 'Scrobbling';
+
+  @override
+  String get source => 'Kaynak: ';
+
+  @override
+  String get uncompressed => 'Sıkıştırılmamış';
+
+  @override
+  String get dab_music_source_description =>
+      'Audiophile\'ler için. Yüksek kaliteli/kayıpsız ses akışları sağlar. Doğru ISRC tabanlı parça eşleştirme.';
 }
